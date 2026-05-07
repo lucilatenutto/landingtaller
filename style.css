@@ -454,17 +454,13 @@
         margin: 40px auto;
         text-align: center;
     }
-
-    }
-
     /* Sección Pogo */
     .pogo-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px 10%;
+        padding: 40px 5%;
         width: 100%;
-        overflow: hidden;
     }
 
     .pogo-container {
@@ -855,5 +851,30 @@
 
         .maps-link-container {
             margin: 30px auto;
+        }
+
+        .pogo-section {
+            padding: 30px 10px;
+        }
+        
+        .pogo-container {
+            width: 85%;
+            padding: 40px 20px 70px; /* Mas padding inferior para el boton */
+        }
+        
+        .rayo-pogo-1 { left: -40px; width: 50px; }
+        .rayo-pogo-2 { left: -40px; width: 50px; }
+        .rayo-pogo-3 { right: -30px; width: 50px; }
+        .rayo-pogo-4 { right: -30px; width: 50px; }
+        
+        .pogo-badge {
+            font-size: 2rem;
+            left: -10px;
+            top: -15px;
+        }
+        
+        .pogo-cta {
+            margin-top: 20px;
+            margin-bottom: 30px;
         }
     }
