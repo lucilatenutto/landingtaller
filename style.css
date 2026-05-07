@@ -1,6 +1,6 @@
     :root {
         --fucsia-borde: #E30066;
-        --dorado-olga: #d4b519;
+        --dorado-olga: #FFD700;
         --magenta-pogo: #F80A9F;
         --amarillo-sumate: #F5E602;
         --gris-fondo-inicio: #2D3132;
@@ -107,7 +107,7 @@
         }
 
         .rayo-izq {
-            top: 1%;
+            top: 2.5%;
             left: 0;
             transform: rotate(10deg);
         }
