@@ -28,11 +28,22 @@
         <div class="logo-container">
             <img src="loguiolga.png" alt="Logo OLGA" class="logo-image">
         </div>
+        <div class="menu-container">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <nav class="menu-nav">
+                <a href="#inicio">INICIO</a>
+                <a href="#info">INFO</a>
+                <a href="#grilla">GRILLA</a>
+                <a href="#ubicacion">UBICACIÓN</a>
+                <a href="#entradas">ENTRADAS</a>
+            </nav>
+        </div>
     </div>
 
 
     <main>
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="hero-content">
                 <h1>OLGA <br> <span class="rock-text">Rock Day</span></h1>
 
@@ -49,7 +60,7 @@
             </div>
         </section>
 
-        <section class="info-section">
+        <section class="info-section" id="info">
             <div class="sticker1">Arranca a las 20:00</div>
             <div class="sticker2">18 de Julio</div>
             <div class="sticker3">En el Estadio Monumental River</div>
@@ -58,7 +69,7 @@
 
         </section>
 
-        <div class="lista-container">
+        <div class="lista-container" id="grilla">
             <ul class="lista">
                 <li><span class="banda">Entrada al estadio</span> <span class="horario">20:00</span></li>
                 <li><span class="banda">Inicio de Banda de Apertura</span> <span class="horario">20:30</span></li>
@@ -82,14 +93,14 @@
             </ul>
         </div>
 
-        <div class="lugar">
+        <div class="lugar" id="ubicacion">
             <p>BUENOS AIRES CAPITAL EN EL ESTADIO MONUMENTAL RIVER
                 (AV. PRES. FIGUEROA ALCORTA 7597)
             </p>
         </div>
 
 
-        <div class="entradas">
+        <div class="entradas" id="entradas">
             <p>HAY VARIOS TIPOS DE LUGARES PARA PODER DISFRUTAR DEL RECITAL DIVIDIDO EN DOS TIPOS PRINCIPALES PLATEA O
                 CAMPO
                 <br>ALTA: $85.000
