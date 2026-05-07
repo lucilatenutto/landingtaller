@@ -84,8 +84,8 @@
     .rayo {
         position: absolute;
         width: clamp(120px, 20vw, 250px);
-        opacity: 0.6;
-        filter: drop-shadow(0 0 15px rgba(255, 200, 0, 0.3));
+        opacity: 1;
+        filter: drop-shadow(0 0 10px rgba(248, 10, 159, 0.5));
     }
 
     .rayo-izq {
@@ -103,7 +103,7 @@
     @media (max-width: 768px) {
         .rayo {
             width: clamp(100px, 35vw, 180px);
-            opacity: 0.6;
+            opacity: 1;
         }
 
         .rayo-izq {
@@ -186,12 +186,36 @@
         font-size: 1.8rem;
         font-weight: bold;
         border-bottom: 6px solid black;
-        margin-bottom: 50px;
+        margin-bottom: 0;
         transition: 0.2s;
     }
 
     .cta-button:hover {
         transform: translateY(-5px);
+    }
+
+    .cta-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        margin-bottom: 50px;
+    }
+
+    .rayo-btn {
+        width: clamp(60px, 10vw, 100px);
+        pointer-events: none;
+        filter: drop-shadow(0 0 8px rgba(248, 10, 159, 0.5));
+    }
+
+    .rayo-btn-izq {
+        transform: rotate(15deg);
+        margin-right: -10px;
+    }
+
+    .rayo-btn-der {
+        transform: rotate(-15deg) scaleX(-1);
+        margin-left: -10px;
     }
 
     .info-section {
