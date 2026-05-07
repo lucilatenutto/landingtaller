@@ -15,38 +15,45 @@
         box-sizing: border-box;
     }
 
+    html {
+        overflow-x: hidden;
+    }
+
     body {
         position: relative;
-        background: linear-gradient(0deg,
-                #C2007B 3.5%,
-                #222C2F 12.5%,
-                #dfd000 25.5%,
-                #f851bb 37.5%,
-                #4B0082 50.5%,
-                #FF0000 62.5%,
-                #1cd299 75.5%,
-                #dcdcdc 87.5%,
-                #a93344 100.5%);
+        background: linear-gradient(180deg,
+                #6A00A3 0%,
+                #55207A 8%,
+                #3B3144 18%,
+                #222C2F 30%,
+                #5A4330 42%,
+                #FFD60A 54%,
+                #FF4FA3 66%,
+                #FF3B30 78%,
+                #1CD299 90%,
+                #E8E8EA 100%);
+
 
         color: white;
         font-family: 'Arial Black', sans-serif;
         min-height: 100vh;
         overflow-x: hidden;
-        border-top: 70px solid var(--fucsia-borde);
     }
 
-    header {
+    .barra-superior {
+        width: 100%;
+        height: 70px;
+        background-color: var(--fucsia-borde);
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
         position: relative;
-        padding: 0;
-        height: 0;
+        z-index: 998;
     }
 
     .logo-container {
-        position: absolute;
-        top: -40px;
-        left: 20px;
-        width: clamp(60px, 10vw, 80px);
-        height: clamp(60px, 10vw, 80px);
+        width: clamp(50px, 10vw, 65px);
+        height: clamp(50px, 10vw, 65px);
         background-color: white;
         border: 3px solid #00a8ff;
         border-radius: 50%;
@@ -76,21 +83,40 @@
 
     .rayo {
         position: absolute;
-        width: 15vw;
-        max-width: 200px;
+        width: clamp(120px, 20vw, 250px);
         opacity: 0.6;
+        filter: drop-shadow(0 0 15px rgba(255, 200, 0, 0.3));
     }
 
     .rayo-izq {
-        top: 10%;
-        left: 5%;
-        transform: rotate(15deg);
+        top: 2%;
+        left: 2%;
+        transform: rotate(12deg);
     }
 
     .rayo-der {
-        top: 25%;
-        right: 5%;
-        transform: rotate(-15deg) scaleX(-1);
+        top: 18%;
+        right: 2%;
+        transform: rotate(-12deg) scaleX(-1);
+    }
+
+    @media (max-width: 768px) {
+        .rayo {
+            width: clamp(100px, 35vw, 180px);
+            opacity: 0.6;
+        }
+
+        .rayo-izq {
+            top: 1%;
+            left: 0;
+            transform: rotate(10deg);
+        }
+
+        .rayo-der {
+            top: 8%;
+            right: 0;
+            transform: rotate(-10deg) scaleX(-1);
+        }
     }
 
 
@@ -404,9 +430,8 @@
             margin: 30px auto;
         }
 
-        .logo-container {
-            left: 10px;
-            top: -35px;
+        .barra-superior {
+            padding: 0 10px;
         }
 
         .maps-link-container {
