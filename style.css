@@ -65,33 +65,34 @@
         display: block;
     }
 
-    body::before,
-    body::after {
-        content: "";
+    .decoracion-fondo {
         position: absolute;
-        width: 200px;
-        height: 200px;
-        background-image: url('rayito.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        z-index: 5;
-        opacity: 0.8;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         pointer-events: none;
+        z-index: -1;
     }
 
-    body::before {
-        top: 180px;
-        left: 20px;
+    .rayo {
+        position: absolute;
+        width: 15vw;
+        max-width: 200px;
+        opacity: 0.6;
+    }
+
+    .rayo-izq {
+        top: 10%;
+        left: 5%;
         transform: rotate(15deg);
     }
 
-    body::after {
-        top: 240px;
-        right: 25px;
-        transform: rotate(-10deg) scaleX(-1);
+    .rayo-der {
+        top: 25%;
+        right: 5%;
+        transform: rotate(-15deg) scaleX(-1);
     }
-
 
 
     .hero {
@@ -171,80 +172,123 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 15%;
-        gap: 15px;
-        scale: 1.2;
+        padding: 40px 10%;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Estilo base para stickers */
+    .sticker1, .sticker2, .sticker3, .sticker4, .sticker5 {
+        background-color: var(--gris-etiquetas);
+        color: black;
+        padding: 12px 25px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        width: fit-content;
+        text-align: center;
     }
 
     .sticker1 {
-        background-color: var(--gris-etiquetas);
-        color: black;
-        padding: 8px 20px;
-        font-weight: bold;
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(1deg);
         align-self: flex-start;
     }
 
     .sticker2 {
-        background-color: var(--gris-etiquetas);
-        color: black;
-        padding: 8px 20px;
-        font-weight: bold;
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         transform: rotate(1deg);
         align-self: flex-end;
-        margin-right: 200px;
     }
 
     .sticker3 {
-        background-color: var(--gris-etiquetas);
-        color: black;
-        padding: 8px 20px;
-        font-weight: bold;
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         transform: rotate(-1deg);
         align-self: center;
     }
 
     .sticker4 {
-        background-color: var(--gris-etiquetas);
-        color: black;
-        padding: 8px 20px;
-        font-weight: bold;
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
         align-self: flex-end;
     }
 
     .sticker5 {
-        background-color: var(--gris-etiquetas);
-        color: black;
-        padding: 8px 20px;
-        font-weight: bold;
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
         align-self: flex-start;
+    }
+
+    @media (max-width: 768px) {
+        .info-section {
+            padding: 30px 5%;
+            gap: 15px;
+        }
+
+        .sticker1, .sticker2, .sticker3, .sticker4, .sticker5 {
+            align-self: center;
+            transform: rotate(0deg);
+            width: 90%;
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
     }
 
     .lista-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 100px;
+        padding: 50px 5%;
+        width: 100%;
     }
 
     .lista {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        width: 100%;
+        max-width: 800px;
         color: var(--fucsia-borde);
         font-size: 1.5rem;
         font-weight: bold;
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
-        padding: 8px 40px;
+        padding: 20px clamp(15px, 5vw, 40px);
         background-color: var(--gris-etiquetas);
+        list-style: none;
+    }
+
+    .lista li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .lista li::after {
+        content: "";
+        flex-grow: 1;
+        border-bottom: 3px dotted var(--fucsia-borde);
+        order: 2;
+        margin: 0 10px;
+        position: relative;
+        top: -4px;
+        opacity: 0.5;
+    }
+
+    .banda { order: 1; text-align: left; }
+    .horario { order: 3; text-align: right; white-space: nowrap; }
+
+    @media(max-width: 768px) {
+        .lista {
+            font-size: 1.1rem;
+            transform: rotate(0deg);
+        }
+        
+        .lista li {
+            margin-bottom: 15px;
+        }
     }
 
     .lugar {
