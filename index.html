@@ -55,8 +55,42 @@
 
             <div class="cta-container">
                 <img src="rayito.png" alt="" class="rayo-btn rayo-btn-izq">
-                <a href="#" class="cta-button">SUMATE AHORA</a>
+                <a href="#" class="cta-button" onclick="abrirModal(event)">SUMATE AHORA</a>
                 <img src="rayito.png" alt="" class="rayo-btn rayo-btn-der">
+            </div>
+        </section>
+
+        <section class="pogo-section" id="pogo">
+            <div class="pogo-container">
+                <div class="pogo-badge">POGO</div>
+                <img src="rayito.png" alt="" class="rayo-pogo rayo-pogo-1">
+                <img src="rayito.png" alt="" class="rayo-pogo rayo-pogo-2">
+                <img src="rayito.png" alt="" class="rayo-pogo rayo-pogo-3">
+                <img src="rayito.png" alt="" class="rayo-pogo rayo-pogo-4">
+                
+                <div class="comentarios-lista" id="lista-comentarios">
+                    <div class="comentario">
+                        <p class="comentario-header"><span class="bullet">&#9679;</span><span class="nombre">Maria Gomez:</span> <span class="corazon">&#9825;</span></p>
+                        <p class="comentario-texto">Aguante la Rengaaaaaa... :)</p>
+                    </div>
+                    <div class="comentario">
+                        <p class="comentario-header"><span class="bullet">&#9679;</span><span class="nombre">Juan Lopez:</span> <span class="corazon">&#9825;</span></p>
+                        <p class="comentario-texto">El evento mas esperado del año WOOOOOOOOOOOOOOOOW.</p>
+                    </div>
+                    <div class="comentario">
+                        <p class="comentario-header"><span class="bullet">&#9679;</span><span class="nombre">Mateo Fernández:</span> <span class="corazon">&#9825;</span></p>
+                        <p class="comentario-texto">POGO POGO POGO POGO<br>POGO POGO POGO POGO...<br>/(OOO)/</p>
+                    </div>
+                    <div class="comentario">
+                        <p class="comentario-header"><span class="bullet">&#9679;</span><span class="nombre">Gonzalo González:</span> <span class="corazon">&#9825;</span></p>
+                        <p class="comentario-texto">Hora de la fiestaaaaaaa...</p>
+                    </div>
+                </div>
+                <button class="btn-mas" onclick="abrirModal()">+</button>
+            </div>
+            
+            <div class="cta-container pogo-cta">
+                <a href="#" class="cta-button" onclick="abrirModal(event)">SUMATE AHORA</a>
             </div>
         </section>
 
@@ -112,6 +146,58 @@
         </div>
 
     </main>
+
+    <!-- Modal de Registro -->
+    <div id="modal-registro" class="modal-overlay">
+        <div class="modal-content">
+            <button class="btn-cerrar" onclick="cerrarModal()">X</button>
+            <img src="rayito.png" alt="" class="rayo-modal rayo-modal-1">
+            <img src="rayito.png" alt="" class="rayo-modal rayo-modal-2">
+            <img src="rayito.png" alt="" class="rayo-modal rayo-modal-3">
+            <img src="rayito.png" alt="" class="rayo-modal rayo-modal-4">
+
+            <form class="form-registro" id="form-pogo" onsubmit="enviarFormulario(event)">
+                <div class="form-group full-width">
+                    <label>. Gmail:</label>
+                    <input type="email" id="form-email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label>. NOMBRE:</label>
+                        <input type="text" id="form-nombre" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label>. Apellido:</label>
+                        <input type="text" id="form-apellido" required>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>. ¿Cuál es tu banda de Rock Nacional favorita?:</label>
+                    <select id="form-banda" required>
+                        <option value="" disabled selected hidden>Seleccionar...</option>
+                        <option value="La Renga">La Renga</option>
+                        <option value="Los Redondos">Los Redondos</option>
+                        <option value="Soda Stereo">Soda Stereo</option>
+                        <option value="Los Piojos">Los Piojos</option>
+                    </select>
+                </div>
+                <div class="form-group align-center">
+                    <label for="form-info" style="cursor: pointer;">. Recibir informacion de la banda:</label>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="form-info">
+                        <span class="checkmark"></span>
+                    </div>
+                </div>
+                <div class="form-group full-width" style="margin-top: 20px;">
+                    <label>. Deja tu mensaje para el POGO:</label>
+                    <textarea id="form-mensaje" rows="4" placeholder="..." required></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn-registrarse"><span>Registrarse</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 </body>
 

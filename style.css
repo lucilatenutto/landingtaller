@@ -455,7 +455,320 @@
         text-align: center;
     }
 
+    }
 
+    /* Sección Pogo */
+    .pogo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .pogo-container {
+        position: relative;
+        background-color: #dcdcdc;
+        color: black;
+        width: 100%;
+        max-width: 600px;
+        padding: 50px 30px 40px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .pogo-badge {
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Stardos Stencil', cursive;
+        font-size: 2.5rem;
+        padding: 5px 20px;
+        transform: rotate(-10deg);
+        box-shadow: 6px 6px 0px var(--amarillo-sumate);
+        text-transform: uppercase;
+        z-index: 10;
+        line-height: 1;
+    }
+
+    .rayo-pogo {
+        position: absolute;
+        width: clamp(60px, 12vw, 120px);
+        filter: drop-shadow(0 0 5px rgba(248, 10, 159, 0.5));
+        z-index: 5;
+    }
+
+    .rayo-pogo-1 {
+        top: 20%;
+        left: -40px;
+        transform: rotate(20deg);
+    }
+
+    .rayo-pogo-2 {
+        top: 40%;
+        left: -50px;
+        transform: rotate(5deg);
+    }
+
+    .rayo-pogo-3 {
+        top: 45%;
+        right: -60px;
+        transform: rotate(-15deg) scaleX(-1);
+    }
+
+    .rayo-pogo-4 {
+        bottom: 20%;
+        right: -50px;
+        transform: rotate(-5deg) scaleX(-1);
+    }
+
+    .comentarios-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 30px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .comentario {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .comentario-header {
+        font-weight: 900;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 0;
+    }
+
+    .bullet {
+        font-size: 1.5rem;
+    }
+
+    .corazon {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .comentario-texto {
+        font-size: 1.2rem;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .btn-mas {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--amarillo-sumate);
+        color: black;
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 4px 4px 0px var(--fucsia-borde);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.1s;
+    }
+
+    .btn-mas:hover {
+        transform: scale(1.05);
+    }
+
+    .pogo-cta {
+        margin-bottom: 0;
+        z-index: 10;
+        margin-top: 10px;
+    }
+
+    /* Modal de Registro */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        padding: 20px;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #B2A22C;
+        color: black;
+        width: 100%;
+        max-width: 500px;
+        padding: 40px 30px;
+        border: 4px solid black;
+        border-radius: 12px;
+        font-family: 'Anton', sans-serif;
+    }
+
+    .btn-cerrar {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Arial Black', sans-serif;
+        border-radius: 4px;
+    }
+
+    .rayo-modal {
+        position: absolute;
+        width: clamp(50px, 10vw, 90px);
+        z-index: -1;
+    }
+
+    .rayo-modal-1 { top: -20px; left: -30px; transform: rotate(15deg); }
+    .rayo-modal-2 { top: 60px; left: -40px; transform: rotate(5deg); }
+    .rayo-modal-3 { top: 120px; right: -40px; transform: rotate(-15deg) scaleX(-1); }
+    .rayo-modal-4 { bottom: 120px; right: -40px; transform: rotate(5deg) scaleX(-1); }
+
+    .form-registro {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 1.3rem;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .full-width { width: 100%; }
+    .half-width { width: 50%; }
+
+    .form-group label {
+        font-family: 'Anton', sans-serif;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea {
+        background-color: #dcdcdc;
+        border: none;
+        padding: 10px;
+        font-family: 'Arial', sans-serif;
+        font-size: 1.1rem;
+        width: 100%;
+        outline: none;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+    }
+
+    .align-center {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .align-center label {
+        color: var(--fucsia-borde);
+        margin: 0;
+    }
+
+    .custom-checkbox {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: var(--fucsia-borde);
+        cursor: pointer;
+    }
+
+    .custom-checkbox input:checked ~ .checkmark:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 8px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .form-submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn-registrarse {
+        background-color: var(--fucsia-borde);
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.8rem;
+        cursor: pointer;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .btn-registrarse span {
+        border-bottom: 2px dashed white;
+    }
 
     /*tipografias */
 
