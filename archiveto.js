@@ -21,7 +21,7 @@ function enviarFormulario(e) {
 
     // Crear nuevo comentario
     const lista = document.getElementById('lista-comentarios');
-    
+
     const nuevoComentario = document.createElement('div');
     nuevoComentario.className = 'comentario';
 
@@ -39,7 +39,7 @@ function enviarFormulario(e) {
 }
 
 // Cerrar modal si se hace clic fuera del contenido
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById('modal-registro');
     if (event.target == modal) {
         cerrarModal();
