@@ -90,7 +90,7 @@
         transition: transform 0.2s;
         display: inline-block;
     }
-    
+
     .menu-icon:hover {
         transform: scale(1.1);
     }
@@ -109,7 +109,7 @@
         min-width: 220px;
     }
 
-    .menu-toggle:checked ~ .menu-nav {
+    .menu-toggle:checked~.menu-nav {
         display: flex;
     }
 
@@ -503,14 +503,14 @@
     }
 
     .rayo-pogo-1 {
-        top: 20%;
-        left: -40px;
+        top: 15%;
+        left: -85px;
         transform: rotate(20deg);
     }
 
     .rayo-pogo-2 {
-        top: 40%;
-        left: -50px;
+        top: 30%;
+        left: -90px;
         transform: rotate(5deg);
     }
 
@@ -650,10 +650,29 @@
         z-index: -1;
     }
 
-    .rayo-modal-1 { top: -20px; left: -30px; transform: rotate(15deg); }
-    .rayo-modal-2 { top: 60px; left: -40px; transform: rotate(5deg); }
-    .rayo-modal-3 { top: 120px; right: -40px; transform: rotate(-15deg) scaleX(-1); }
-    .rayo-modal-4 { bottom: 120px; right: -40px; transform: rotate(5deg) scaleX(-1); }
+    .rayo-modal-1 {
+        top: -20px;
+        left: -30px;
+        transform: rotate(15deg);
+    }
+
+    .rayo-modal-2 {
+        top: 60px;
+        left: -40px;
+        transform: rotate(5deg);
+    }
+
+    .rayo-modal-3 {
+        top: 120px;
+        right: -40px;
+        transform: rotate(-15deg) scaleX(-1);
+    }
+
+    .rayo-modal-4 {
+        bottom: 120px;
+        right: -40px;
+        transform: rotate(5deg) scaleX(-1);
+    }
 
     .form-registro {
         display: flex;
@@ -673,8 +692,13 @@
         gap: 5px;
     }
 
-    .full-width { width: 100%; }
-    .half-width { width: 50%; }
+    .full-width {
+        width: 100%;
+    }
+
+    .half-width {
+        width: 50%;
+    }
 
     .form-group label {
         font-family: 'Anton', sans-serif;
@@ -735,7 +759,7 @@
         cursor: pointer;
     }
 
-    .custom-checkbox input:checked ~ .checkmark:after {
+    .custom-checkbox input:checked~.checkmark:after {
         content: "";
         position: absolute;
         display: block;
