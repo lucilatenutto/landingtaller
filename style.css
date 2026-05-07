@@ -73,6 +73,21 @@
         display: block;
     }
 
+    .barra-izq {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .banner-texto {
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        white-space: nowrap;
+        text-shadow: -2px 0px 0px black;
+        letter-spacing: 2px;
+    }
+
     .menu-container {
         display: flex;
         align-items: center;
@@ -295,9 +310,9 @@
     .sticker5 {
         background-color: var(--gris-etiquetas);
         color: black;
-        padding: 18px 40px;
+        padding: 12px 25px;
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         width: fit-content;
         text-align: center;
     }
@@ -456,6 +471,7 @@
         margin: 40px auto;
         text-align: center;
     }
+
     /* Sección Pogo */
     .pogo-section {
         display: flex;
@@ -858,23 +874,39 @@
         .pogo-section {
             padding: 30px 10px;
         }
-        
+
         .pogo-container {
             width: 85%;
-            padding: 40px 20px 70px; /* Mas padding inferior para el boton */
+            padding: 40px 20px 70px;
+            /* Mas padding inferior para el boton */
         }
-        
-        .rayo-pogo-1 { left: -40px; width: 50px; }
-        .rayo-pogo-2 { left: -40px; width: 50px; }
-        .rayo-pogo-3 { right: -30px; width: 50px; }
-        .rayo-pogo-4 { right: -30px; width: 50px; }
-        
+
+        .rayo-pogo-1 {
+            left: -40px;
+            width: 50px;
+        }
+
+        .rayo-pogo-2 {
+            left: -40px;
+            width: 50px;
+        }
+
+        .rayo-pogo-3 {
+            right: -30px;
+            width: 50px;
+        }
+
+        .rayo-pogo-4 {
+            right: -30px;
+            width: 50px;
+        }
+
         .pogo-badge {
             font-size: 2rem;
             left: -10px;
             top: -15px;
         }
-        
+
         .pogo-cta {
             margin-top: 20px;
             margin-bottom: 30px;
