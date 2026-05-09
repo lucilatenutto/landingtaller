@@ -1,5 +1,3 @@
-// muestra lo del formulario
-
 function abrirModal(e) {
     if (e) e.preventDefault();
     document.getElementById('modal-registro').classList.add('active');
@@ -12,14 +10,14 @@ function cerrarModal() {
 function enviarFormulario(e) {
     e.preventDefault();
 
-    // Obtener valores
+
     const nombre = document.getElementById('form-nombre').value;
     const apellido = document.getElementById('form-apellido').value;
     const mensaje = document.getElementById('form-mensaje').value;
 
     if (!nombre || !mensaje) return;
 
-    // Crear nuevo comentario
+
     const lista = document.getElementById('lista-comentarios');
 
     const nuevoComentario = document.createElement('div');
@@ -30,15 +28,13 @@ function enviarFormulario(e) {
         <p class="comentario-texto">${mensaje.replace(/\n/g, '<br>')}</p>
     `;
 
-    // Agregar a la lista
     lista.appendChild(nuevoComentario);
 
-    // Limpiar formulario y cerrar modal
+
     document.getElementById('form-pogo').reset();
     cerrarModal();
 }
 
-// Cerrar modal si se hace clic fuera del contenido
 window.onclick = function (event) {
     const modal = document.getElementById('modal-registro');
     if (event.target == modal) {

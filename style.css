@@ -302,7 +302,7 @@
         width: 100%;
     }
 
-    /* Estilo base para stickers */
+
     .sticker1,
     .sticker2,
     .sticker3,
@@ -310,9 +310,9 @@
     .sticker5 {
         background-color: var(--gris-etiquetas);
         color: black;
-        padding: 18px 40px;
+        padding: 15px 30px;
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         width: fit-content;
         text-align: center;
     }
@@ -354,22 +354,15 @@
         }
 
         .sticker1,
+        .sticker2,
         .sticker3,
+        .sticker4,
         .sticker5 {
             align-self: center;
             transform: rotate(0.5deg);
             width: 90%;
             font-size: 1rem;
-            padding: 10px 15px;
-        }
-
-        .sticker2,
-        .sticker4 {
-            align-self: center;
-            transform: rotate(-0.5deg);
-            width: 90%;
-            font-size: 1rem;
-            padding: 10px 15px;
+            padding: 10px 20px;
         }
     }
 
@@ -381,18 +374,55 @@
         width: 100%;
     }
 
+    .grilla-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .horario-badge {
+        position: absolute;
+        top: -25px;
+        left: -3px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Stardos Stencil', cursive;
+        font-size: 2.5rem;
+        padding: 10px 30px;
+        transform: rotate(-7deg);
+        box-shadow: 6px 6px 0px var(--dorado-olga);
+        z-index: 10;
+        line-height: 1;
+    }
+
+    .no-llegues-tarde-badge {
+        position: absolute;
+        top: -20px;
+        right: 10px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        padding: 8px 25px;
+        transform: rotate(7deg);
+        z-index: 10;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+
     .lista {
         display: flex;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
         max-width: 800px;
-        color: var(--fucsia-borde);
+        margin: 0 auto;
+        color: black;
         font-size: 1.5rem;
         font-weight: bold;
-        box-shadow: 6px 6px 0px var(--magenta-pogo);
-        transform: rotate(-1deg);
-        padding: 20px clamp(15px, 5vw, 40px);
+        box-shadow: 15px 15px 0px var(--dorado-olga);
+        transform: rotate(0deg);
+        padding: 60px 40px;
         background-color: var(--gris-etiquetas);
         list-style: none;
     }
@@ -409,7 +439,7 @@
     .lista li::after {
         content: "";
         flex-grow: 1;
-        border-bottom: 3px dotted var(--fucsia-borde);
+        border-bottom: 3px dotted black;
         order: 2;
         margin: 0 10px;
         position: relative;
@@ -429,9 +459,31 @@
     }
 
     @media(max-width: 768px) {
-        .lista {
+        .lista-container {
+            padding: 60px 15px;
+        }
+
+        .horario-badge {
+            top: -30px;
+            left: 10px;
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        .no-llegues-tarde-badge {
+            top: -15px;
+            right: 5px;
+            padding: 6px 15px;
             font-size: 1.1rem;
-            transform: rotate(0.5deg);
+        }
+
+        .lista {
+            width: 95%;
+            font-size: 1rem;
+            transform: rotate(0deg);
+            padding: 40px 20px;
+            box-shadow: 8px 8px 0px var(--dorado-olga);
+            margin: 0 auto;
         }
 
         .lista li {
@@ -439,7 +491,33 @@
         }
     }
 
-    .lugar {
+    .ubicacion-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 20px;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .ubicacion-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: fit-content;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .box-wrapper {
+        position: relative;
+        width: fit-content;
+    }
+
+    .lugar-box {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -449,11 +527,80 @@
         font-weight: bold;
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         transform: rotate(0.5deg);
-        padding: 20px 30px;
-        width: fit-content;
-        max-width: 90%;
-        margin: 40px auto;
+        padding: 50px 40px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
         text-align: center;
+    }
+
+    .lugar-box p {
+        margin: 0;
+    }
+
+    .lugar-badge {
+        position: absolute;
+        top: -35px;
+        left: -50px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Stardos Stencil', cursive;
+        font-size: 2.5rem;
+        padding: 10px 30px;
+        transform: rotate(-7deg);
+        box-shadow: 4px 4px 0px var(--dorado-olga);
+        z-index: 2;
+        line-height: 1;
+    }
+
+    .no-te-pierdas-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        padding: 8px 25px;
+        transform: rotate(-7deg);
+        z-index: 2;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .estadio-img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .ubicacion-container {
+            padding: 40px 15px;
+        }
+
+        .lugar-box {
+            padding: 40px 20px;
+            box-shadow: 8px 8px 0px var(--dorado-olga);
+        }
+
+        .lugar-badge {
+            top: -15px;
+            left: 5px;
+            padding: 8px 20px;
+            font-size: 1.8rem;
+        }
+
+        .no-te-pierdas-badge {
+            right: 5px;
+            bottom: -10px;
+            padding: 6px 15px;
+            font-size: 1.1rem;
+        }
+
+        .estadio-img {
+            border-radius: 20px;
+        }
     }
 
     .entradas {
@@ -465,9 +612,9 @@
         font-size: 1.3rem;
         font-weight: bold;
         box-shadow: 6px 6px 0px var(--magenta-pogo);
-        padding: 20px 30px;
-        width: fit-content;
-        max-width: 90%;
+        padding: 50px 40px;
+        width: 100%;
+        max-width: 800px;
         margin: 40px auto;
         text-align: center;
     }
@@ -486,8 +633,8 @@
         background-color: #dcdcdc;
         color: black;
         width: 100%;
-        max-width: 600px;
-        padding: 50px 30px 40px;
+        max-width: 800px;
+        padding: 60px 40px;
         margin: 0 auto 20px auto;
         border-radius: 8px;
         font-family: 'Arial', sans-serif;
@@ -501,7 +648,7 @@
         color: white;
         font-family: 'Stardos Stencil', cursive;
         font-size: 2.5rem;
-        padding: 5px 20px;
+        padding: 10px 30px;
         transform: rotate(-10deg);
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         text-transform: uppercase;
@@ -608,7 +755,6 @@
         margin-top: 10px;
     }
 
-    /* Modal de Registro */
     .modal-overlay {
         position: fixed;
         top: 0;
@@ -808,7 +954,7 @@
         border-bottom: 2px dashed white;
     }
 
-    /*tipografias */
+
 
     body {
         font-family: 'Anton', sans-serif;
@@ -819,7 +965,7 @@
     }
 
     .rock-text {
-        font-family: 'Permanent Marker', cursive;
+        font-family: 'Road Rage', cursive;
         font-size: clamp(4rem, 10vw, 8rem);
         display: block;
         margin-top: -20px;
@@ -878,7 +1024,6 @@
         .pogo-container {
             width: 85%;
             padding: 40px 20px 70px;
-            /* Mas padding inferior para el boton */
         }
 
         .rayo-pogo-1 {
