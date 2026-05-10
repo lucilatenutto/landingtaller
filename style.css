@@ -603,21 +603,147 @@
         }
     }
 
-    .entradas {
+    .entradas-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 60px 20px;
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .entradas-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .entradas-main {
+        position: relative;
+        flex: 1.2;
+        max-width: 800px;
+    }
+
+    .entradas-box {
         background-color: var(--gris-etiquetas);
         color: black;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        box-shadow: 6px 6px 0px var(--magenta-pogo);
-        padding: 50px 40px;
+        box-shadow: 6px 6px 0px var(--dorado-olga);
+        padding: 60px 40px 40px 40px;
         width: 100%;
-        max-width: 800px;
-        margin: 40px auto;
-        text-align: center;
+        text-align: left;
     }
+
+    .precios {
+        margin: 20px 0;
+    }
+
+    .precios p {
+        margin-bottom: 5px;
+    }
+
+    .entradas-badge {
+        position: absolute;
+        top: -30px;
+        left: -15px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Stardos Stencil', cursive;
+        font-size: 2.5rem;
+        padding: 10px 30px;
+        transform: rotate(-7deg);
+        box-shadow: 6px 6px 0px var(--dorado-olga);
+        z-index: 10;
+        line-height: 1;
+    }
+
+    .fecha-badge {
+        position: absolute;
+        top: -25px;
+        right: -15px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        padding: 8px 25px;
+        transform: rotate(7deg);
+        z-index: 10;
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    }
+
+    .allaccess-nota {
+        color: var(--fucsia-borde);
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+
+    .entradas-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex: 0.8;
+        width: 100%;
+        max-width: 350px;
+        margin-top: 20px;
+    }
+
+    .venta-box {
+        background-color: #D9D9D9;
+        color: black;
+        padding: 25px;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.2rem;
+        text-align: center;
+        box-shadow: 6px 6px 0px var(--fucsia-borde);
+        line-height: 1.2;
+    }
+
+    .btn-compra {
+        background-color: var(--amarillo-sumate);
+        color: black;
+        text-decoration: none;
+        padding: 25px 20px;
+        font-family: 'Anton', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        box-shadow: 8px 8px 0px var(--fucsia-borde);
+        transition: transform 0.2s, box-shadow 0.2s;
+        border: 2px solid black;
+    }
+
+    .btn-compra:hover {
+        transform: translateY(-5px);
+        box-shadow: 10px 10px 0px var(--fucsia-borde);
+    }
+
+    .ahora-text {
+        color: var(--fucsia-borde);
+        text-decoration: underline;
+    }
+
+    @media (max-width: 950px) {
+        .entradas-wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+        .entradas-sidebar {
+            flex: none;
+            width: 100%;
+            max-width: 800px;
+            margin-top: 0;
+        }
+        .entradas-main {
+            width: 100%;
+        }
+    }
+
 
     /* Sección Pogo */
     .pogo-section {
