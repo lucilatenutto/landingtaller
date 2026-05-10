@@ -934,6 +934,7 @@
         border: 4px solid black;
         border-radius: 12px;
         font-family: 'Anton', sans-serif;
+        z-index: 5; /* Base layer for content */
     }
 
     .btn-cerrar {
@@ -953,12 +954,13 @@
         justify-content: center;
         font-family: 'Arial Black', sans-serif;
         border-radius: 4px;
+        z-index: 100; /* Always on top of everything inside */
     }
 
     .rayo-modal {
         position: absolute;
         width: clamp(50px, 10vw, 90px);
-        z-index: -1;
+        z-index: 10; /* Positive z-index to be above the dark overlay */
     }
 
     .rayo-modal-1 {
@@ -1385,3 +1387,94 @@
             top: -15px;
         }
     }
+
+    /* Pogo Success Message */
+    .pogo-success-view {
+        background-color: #B2A22C; /* Ochre yellow as in image */
+        color: black;
+        padding: 60px 40px;
+        text-align: center;
+        border-radius: 20px;
+        position: relative;
+        overflow: visible; /* Changed from hidden to show rays */
+        border: 4px solid black;
+        box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        z-index: 20; /* Above form */
+    }
+
+    .success-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        z-index: 5;
+    }
+
+    .pogo-fucsia {
+        color: var(--fucsia-borde);
+    }
+
+    .success-btn-container {
+        z-index: 5;
+    }
+
+    .btn-de-nada {
+        background-color: var(--fucsia-borde);
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-family: 'Anton', sans-serif;
+        font-size: 2rem;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 4px 4px 0px black;
+        transition: transform 0.1s;
+    }
+
+    .btn-de-nada:hover {
+        transform: scale(1.05);
+    }
+
+    .rayo-success {
+        position: absolute;
+        width: 80px;
+        filter: drop-shadow(0 0 5px rgba(248, 10, 159, 0.5));
+        z-index: 1;
+    }
+
+    .rayo-success-1 {
+        top: 20px;
+        left: 10px;
+        transform: rotate(-15deg);
+    }
+
+    .rayo-success-2 {
+        bottom: 50px;
+        right: -20px;
+        transform: rotate(20deg);
+    }
+
+    .rayo-success-3 {
+        top: 100px;
+        right: 10px;
+        transform: rotate(-5deg) scaleX(-1);
+    }
+
+    @media (max-width: 768px) {
+        .success-title {
+            font-size: 1.8rem;
+        }
+        .btn-de-nada {
+            font-size: 1.5rem;
+            padding: 10px 30px;
+        }
+        .rayo-success {
+            width: 50px;
+        }
+    }

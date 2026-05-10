@@ -1,5 +1,8 @@
 function abrirModal(e) {
     if (e) e.preventDefault();
+    // Ensure form is visible and success is hidden when opening
+    document.getElementById('form-pogo').style.display = 'flex';
+    document.getElementById('pogo-success').style.display = 'none';
     document.getElementById('modal-registro').classList.add('active');
 }
 
@@ -10,13 +13,11 @@ function cerrarModal() {
 function enviarFormulario(e) {
     e.preventDefault();
 
-
     const nombre = document.getElementById('form-nombre').value;
     const apellido = document.getElementById('form-apellido').value;
     const mensaje = document.getElementById('form-mensaje').value;
 
     if (!nombre || !mensaje) return;
-
 
     const lista = document.getElementById('lista-comentarios');
 
@@ -30,9 +31,12 @@ function enviarFormulario(e) {
 
     lista.appendChild(nuevoComentario);
 
+    // Show success message
+    document.getElementById('form-pogo').style.display = 'none';
+    document.getElementById('pogo-success').style.display = 'flex';
 
+    // Reset form fields
     document.getElementById('form-pogo').reset();
-    cerrarModal();
 }
 
 window.onclick = function (event) {
