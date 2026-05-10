@@ -458,6 +458,7 @@
         white-space: nowrap;
     }
 
+    /* Estilos responsivos para la lista */
     @media(max-width: 768px) {
         .lista-container {
             padding: 60px 15px;
@@ -727,20 +728,44 @@
         text-decoration: underline;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 768px) {
         .entradas-wrapper {
             flex-direction: column;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
         }
         .entradas-sidebar {
             flex: none;
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
             margin-top: 0;
         }
         .entradas-main {
             width: 100%;
+        }
+        .entradas-badge {
+            font-size: 1.8rem;
+            top: -20px;
+            left: 5px;
+            padding: 8px 20px;
+        }
+        .fecha-badge {
+            font-size: 1.1rem;
+            top: -15px;
+            right: 5px;
+            padding: 6px 15px;
+        }
+        .entradas-box {
+            padding: 40px 20px 20px;
+            font-size: 1rem;
+        }
+        .btn-compra {
+            font-size: 1.5rem;
+            padding: 15px;
+        }
+        .venta-box {
+            font-size: 1rem;
+            padding: 15px;
         }
     }
 
@@ -1181,5 +1206,182 @@
         .pogo-cta {
             margin-top: 20px;
             margin-bottom: 30px;
+        }
+    }
+
+    /* Sección Olga Equipo */
+    .olga-equipo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        padding: 80px 20px;
+        width: 100%;
+        max-width: 1100px;
+        margin: 60px auto;
+    }
+
+    .equipo-fila-superior, .equipo-fila-inferior {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .box-main-info {
+        position: relative;
+        flex: 1.5;
+        max-width: 750px;
+    }
+
+    .info-content-box {
+        background-color: var(--gris-etiquetas);
+        color: black;
+        padding: 70px 40px 40px;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        box-shadow: 10px 10px 0px var(--dorado-olga);
+        line-height: 1.4;
+        text-transform: uppercase;
+    }
+
+    .resaltado-fucsia {
+        color: var(--fucsia-borde);
+    }
+
+    .badge-olga-logo {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Road Rage', cursive;
+        font-size: 2.5rem;
+        padding: 10px 35px;
+        transform: rotate(-5deg);
+        box-shadow: 8px 8px 0px var(--dorado-olga);
+        z-index: 10;
+        line-height: 1;
+        border: 2px solid var(--dorado-olga);
+    }
+    .badge-youtube {
+        position: absolute;
+        top: -40px;
+        right: -50px;
+        background-color: var(--fucsia-borde);
+        color: white;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        padding: 12px 40px;
+        transform: rotate(12deg);
+        z-index: 10;
+        box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    }
+    .box-socials {
+        background-color: var(--gris-etiquetas);
+        color: black;
+        padding: 40px 30px;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.3rem;
+        flex: 0.6;
+        min-width: 280px;
+        box-shadow: 8px 8px 0px var(--dorado-olga);
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .equipo-img-container {
+        flex: 1;
+        max-width: 550px;
+    }
+
+    .equipo-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .box-equipo-desc {
+        position: relative;
+        background-color: var(--gris-etiquetas);
+        color: black;
+        padding: 50px 40px;
+        font-family: 'Anton', sans-serif;
+        font-size: 1.4rem;
+        flex: 1.2;
+        max-width: 650px;
+        box-shadow: 0px 10px 0px var(--fucsia-borde);
+        border-right: 8px solid var(--fucsia-borde);
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+
+    .badge-olga-mini {
+        position: absolute;
+        bottom: -20px;
+        right: -10px;
+        background-color: white;
+        color: var(--fucsia-borde);
+        font-family: 'Road Rage', cursive;
+        font-size: 2.5rem;
+        padding: 8px 25px;
+        transform: rotate(-5deg);
+        border: 4px solid #00a8ff;
+        box-shadow: 6px 6px 0px #00a8ff;
+        z-index: 10;
+    }
+
+    @media (max-width: 768px) {
+        .olga-equipo-section {
+            padding: 60px 15px;
+            gap: 50px;
+        }
+        .equipo-fila-superior, .equipo-fila-inferior {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+        .box-main-info, .box-socials, .box-equipo-desc, .equipo-img-container {
+            flex: none;
+            width: 100%;
+            max-width: 100%;
+        }
+          .badge-youtube {
+            top: -25px;
+            right: 5px;
+            font-size: 1.1rem;
+            padding: 6px 15px;
+        }
+        .badge-olga-logo {
+            top: -20px;
+            left: 5px;
+            font-size: 1.8rem;
+            padding: 8px 20px;
+        }
+        .info-content-box {
+            font-size: 1.1rem;
+            padding: 50px 20px 20px;
+        }
+        .box-socials {
+            min-width: 100%;
+            font-size: 1.1rem;
+            padding: 25px;
+        }
+        .box-equipo-desc {
+            font-size: 1.1rem;
+            padding: 40px 20px;
+            align-self: center;
+        }
+        .badge-olga-mini {
+            font-size: 1.8rem;
+            bottom: -15px;
+            right: 5px;
+            padding: 5px 15px;
+        }
+        .pogo-badge {
+            font-size: 1.8rem;
+            left: -10px;
+            top: -15px;
         }
     }
