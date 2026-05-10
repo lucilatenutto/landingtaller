@@ -6,7 +6,7 @@
         --gris-fondo-inicio: #2D3132;
         --gris-fondo-fin: #1E2122;
         --gris-etiquetas: #EAEAEA;
-
+        --section-spacing: 50px;
     }
 
     * {
@@ -674,7 +674,7 @@
         padding: 8px 25px;
         transform: rotate(7deg);
         z-index: 10;
-        box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     }
 
     .allaccess-nota {
@@ -734,35 +734,42 @@
             align-items: center;
             gap: 50px;
         }
+
         .entradas-sidebar {
             flex: none;
             width: 100%;
             max-width: 100%;
             margin-top: 0;
         }
+
         .entradas-main {
             width: 100%;
         }
+
         .entradas-badge {
             font-size: 1.8rem;
             top: -20px;
             left: 5px;
             padding: 8px 20px;
         }
+
         .fecha-badge {
             font-size: 1.1rem;
             top: -15px;
             right: 5px;
             padding: 6px 15px;
         }
+
         .entradas-box {
             padding: 40px 20px 20px;
             font-size: 1rem;
         }
+
         .btn-compra {
             font-size: 1.5rem;
             padding: 15px;
         }
+
         .venta-box {
             font-size: 1rem;
             padding: 15px;
@@ -934,7 +941,8 @@
         border: 4px solid black;
         border-radius: 12px;
         font-family: 'Anton', sans-serif;
-        z-index: 5; /* Base layer for content */
+        z-index: 5;
+        /* Base layer for content */
     }
 
     .btn-cerrar {
@@ -954,13 +962,15 @@
         justify-content: center;
         font-family: 'Arial Black', sans-serif;
         border-radius: 4px;
-        z-index: 100; /* Always on top of everything inside */
+        z-index: 100;
+        /* Always on top of everything inside */
     }
 
     .rayo-modal {
         position: absolute;
         width: clamp(50px, 10vw, 90px);
-        z-index: 10; /* Positive z-index to be above the dark overlay */
+        z-index: 10;
+        /* Positive z-index to be above the dark overlay */
     }
 
     .rayo-modal-1 {
@@ -1223,7 +1233,8 @@
         margin: 60px auto;
     }
 
-    .equipo-fila-superior, .equipo-fila-inferior {
+    .equipo-fila-superior,
+    .equipo-fila-inferior {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1267,6 +1278,7 @@
         line-height: 1;
         border: 2px solid var(--dorado-olga);
     }
+
     .badge-youtube {
         position: absolute;
         top: -40px;
@@ -1278,8 +1290,9 @@
         padding: 12px 40px;
         transform: rotate(12deg);
         z-index: 10;
-        box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
     }
+
     .box-socials {
         background-color: var(--gris-etiquetas);
         color: black;
@@ -1339,48 +1352,61 @@
             padding: 60px 15px;
             gap: 50px;
         }
-        .equipo-fila-superior, .equipo-fila-inferior {
+
+        .equipo-fila-superior,
+        .equipo-fila-inferior {
             flex-direction: column;
             align-items: center;
             gap: 50px;
         }
-        .box-main-info, .box-socials, .box-equipo-desc, .equipo-img-container {
+
+        .box-main-info,
+        .box-socials,
+        .box-equipo-desc,
+        .equipo-img-container {
             flex: none;
             width: 100%;
             max-width: 100%;
         }
-          .badge-youtube {
+
+        .badge-youtube {
             top: -25px;
             right: 5px;
             font-size: 1.1rem;
             padding: 6px 15px;
         }
+
         .badge-olga-logo {
             top: -20px;
             left: 5px;
             font-size: 1.8rem;
             padding: 8px 20px;
         }
+
         .info-content-box {
             font-size: 1.1rem;
             padding: 50px 20px 20px;
         }
+
         .box-socials {
             min-width: 100%;
             font-size: 1.1rem;
             padding: 25px;
         }
+
         .box-equipo-desc {
             font-size: 1.1rem;
             padding: 40px 20px;
             align-self: center;
         }
+
         .badge-olga-mini {
             font-size: 1.8rem;
             bottom: -15px;
             right: 5px;
             padding: 5px 15px;
         }
+
         .pogo-badge {
             font-size: 1.8rem;
             left: -10px;
@@ -1390,21 +1416,24 @@
 
     /* Pogo Success Message */
     .pogo-success-view {
-        background-color: #B2A22C; /* Ochre yellow as in image */
+        background-color: #B2A22C;
+        /* Ochre yellow as in image */
         color: black;
         padding: 60px 40px;
         text-align: center;
         border-radius: 20px;
         position: relative;
-        overflow: visible; /* Changed from hidden to show rays */
+        overflow: visible;
+        /* Changed from hidden to show rays */
         border: 4px solid black;
-        box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: 300px;
-        z-index: 20; /* Above form */
+        z-index: 20;
+        /* Above form */
     }
 
     .success-title {
@@ -1470,11 +1499,13 @@
         .success-title {
             font-size: 1.8rem;
         }
+
         .btn-de-nada {
             font-size: 1.5rem;
             padding: 10px 30px;
         }
+
         .rayo-success {
             width: 50px;
         }
-    }
+    }
