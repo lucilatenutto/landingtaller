@@ -197,7 +197,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 60px 20px;
+        padding: 40px 20px;
         text-align: center;
         overflow: hidden;
     }
@@ -274,7 +274,7 @@
         align-items: center;
         justify-content: center;
         gap: 0;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .rayo-btn {
@@ -295,11 +295,15 @@
 
     .info-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        padding: 40px 10%;
-        gap: 20px;
+        padding: 30px 20px;
+        gap: 30px;
         width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
 
@@ -320,36 +324,32 @@
     .sticker1 {
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(1deg);
-        align-self: flex-start;
     }
 
     .sticker2 {
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         transform: rotate(1deg);
-        align-self: flex-end;
     }
 
     .sticker3 {
         box-shadow: 6px 6px 0px var(--amarillo-sumate);
         transform: rotate(-1deg);
-        align-self: center;
     }
 
     .sticker4 {
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
-        align-self: flex-end;
     }
 
     .sticker5 {
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
-        align-self: flex-start;
     }
 
     @media (max-width: 768px) {
         .info-section {
-            padding: 30px 5%;
+            flex-direction: column;
+            padding: 25px 5%;
             gap: 15px;
         }
 
@@ -370,7 +370,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 50px 5%;
+        padding: 40px 5%;
         width: 100%;
     }
 
@@ -379,6 +379,12 @@
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    @media (min-width: 769px) {
+        .grilla-wrapper {
+            max-width: 1100px;
+        }
     }
 
     .horario-badge {
@@ -427,6 +433,13 @@
         list-style: none;
     }
 
+    @media (min-width: 769px) {
+        .lista {
+            max-width: 1100px;
+            padding: 60px 80px;
+        }
+    }
+
     .lista li {
         display: flex;
         justify-content: space-between;
@@ -447,9 +460,21 @@
         opacity: 0.5;
     }
 
+    @media (min-width: 769px) {
+        .lista li::after {
+            border-bottom: 2px solid black;
+            margin: 0 20px;
+            opacity: 0.7;
+        }
+    }
+
     .banda {
         order: 1;
         text-align: left;
+    }
+
+    .banda::before {
+        content: ".";
     }
 
     .horario {
@@ -458,10 +483,31 @@
         white-space: nowrap;
     }
 
+    @media (min-width: 769px) {
+        .banda {
+            order: 3;
+            text-align: right;
+            text-transform: uppercase;
+        }
+
+        .banda::before {
+            content: none;
+        }
+
+        .horario {
+            order: 1;
+            text-align: left;
+        }
+
+        .horario::before {
+            content: ".";
+        }
+    }
+
     /* Estilos responsivos para la lista */
     @media(max-width: 768px) {
         .lista-container {
-            padding: 60px 15px;
+            padding: 25px 15px;
         }
 
         .horario-badge {
@@ -496,10 +542,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
-        padding: 60px 20px;
+        gap: 30px;
+        padding: 40px 20px;
         width: 100%;
-        margin: 40px 0;
+        margin: 20px 0;
     }
 
     .ubicacion-wrapper {
@@ -577,7 +623,7 @@
 
     @media (max-width: 768px) {
         .ubicacion-container {
-            padding: 40px 15px;
+            padding: 25px 15px;
         }
 
         .lugar-box {
@@ -608,9 +654,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 60px 20px;
+        padding: 40px 20px;
         width: 100%;
-        margin: 40px auto;
+        margin: 20px auto;
     }
 
     .entradas-wrapper {
@@ -777,12 +823,12 @@
     }
 
 
-    /* Sección Pogo */
+    /* SecciÃ³n Pogo */
     .pogo-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px 5%;
+        padding: 30px 5%;
         width: 100%;
     }
 
@@ -1162,7 +1208,8 @@
         }
 
         .hero {
-            padding-top: 100px;
+            padding-top: 40px;
+            padding-bottom: 25px;
         }
 
         .lugar,
@@ -1181,7 +1228,7 @@
         }
 
         .pogo-section {
-            padding: 30px 10px;
+            padding: 25px 10px;
         }
 
         .pogo-container {
@@ -1221,16 +1268,16 @@
         }
     }
 
-    /* Sección Olga Equipo */
+    /* SecciÃ³n Olga Equipo */
     .olga-equipo-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 60px;
-        padding: 80px 20px;
+        gap: 40px;
+        padding: 40px 20px;
         width: 100%;
         max-width: 1100px;
-        margin: 60px auto;
+        margin: 20px auto;
     }
 
     .equipo-fila-superior,
@@ -1349,8 +1396,8 @@
 
     @media (max-width: 768px) {
         .olga-equipo-section {
-            padding: 60px 15px;
-            gap: 50px;
+            padding: 25px 15px;
+            gap: 30px;
         }
 
         .equipo-fila-superior,
@@ -1507,5 +1554,129 @@
 
         .rayo-success {
             width: 50px;
+        }
+    }
+                                    /* Main Footer Styling */
+    .main-footer {
+        background-color: #3d001a; /* Dark wine color from image */
+        color: white;
+        padding: 30px 0;
+        width: 100%;
+        margin-top: 50px;
+        border-top: 5px solid var(--fucsia-borde);
+    }
+
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly; /* Better spacing for desktop */
+        gap: 20px;
+        padding: 0 20px;
+        flex-wrap: nowrap;
+    }
+
+    .footer-logo {
+        flex-shrink: 0;
+    }
+
+    .footer-logo .logo-container {
+        width: 70px;
+        height: 70px;
+        border: 2px solid #00a8ff;
+    }
+
+    .footer-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-title {
+        font-family: 'Anton', sans-serif;
+        font-size: 1.5rem;
+        text-transform: none;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: row; /* Back to row for desktop */
+        gap: 15px;
+        align-items: center;
+    }
+
+    .info-item {
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .footer-socials {
+        display: flex;
+        flex-direction: row; /* Back to row for desktop */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .social-info {
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    .social-icon {
+        width: 22px;
+        height: 22px;
+        stroke-width: 2;
+    }
+
+    /* Mobile Responsive Footer */
+    @media (max-width: 768px) {
+        .footer-container {
+            justify-content: space-around;
+            padding: 0 10px;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .footer-section {
+            flex-direction: column; /* Column for items in mobile */
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-socials {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .info-item, .social-info {
+            font-size: 0.95rem;
+        }
+
+        .footer-logo .logo-container {
+            width: 60px;
+            height: 60px;
         }
     }
