@@ -1163,6 +1163,21 @@
         border-bottom: 2px dashed white;
     }
 
+    /* Separadores de SecciÃ³n */
+    .section-separator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .section-separator img {
+        width: 450px;
+        height: auto;
+    }
+
 
 
     body {
@@ -1210,6 +1225,14 @@
         .hero {
             padding-top: 40px;
             padding-bottom: 25px;
+        }
+
+        .section-separator {
+            padding: 50px 20px;
+        }
+
+        .section-separator img {
+            width: 300px;
         }
 
         .lugar,
@@ -1556,9 +1579,11 @@
             width: 50px;
         }
     }
-                                    /* Main Footer Styling */
+
+    /* Main Footer Styling */
     .main-footer {
-        background-color: #3d001a; /* Dark wine color from image */
+        background-color: #3d001a;
+        /* Dark wine color from image */
         color: white;
         padding: 30px 0;
         width: 100%;
@@ -1571,7 +1596,8 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        justify-content: space-evenly; /* Better spacing for desktop */
+        justify-content: space-evenly;
+        /* Better spacing for desktop */
         gap: 20px;
         padding: 0 20px;
         flex-wrap: nowrap;
@@ -1603,22 +1629,31 @@
 
     .footer-nav {
         display: flex;
-        flex-direction: row; /* Back to row for desktop */
+        flex-direction: row;
+        /* Back to row for desktop */
         gap: 15px;
         align-items: center;
     }
 
     .info-item {
         color: white;
+        text-decoration: none;
         font-family: Arial, sans-serif;
         font-size: 1rem;
         font-weight: bold;
         white-space: nowrap;
+        transition: color 0.2s, opacity 0.2s;
+    }
+
+    .info-item:hover {
+        color: var(--fucsia-borde);
+        opacity: 0.8;
     }
 
     .footer-socials {
         display: flex;
-        flex-direction: row; /* Back to row for desktop */
+        flex-direction: row;
+        /* Back to row for desktop */
         gap: 20px;
         align-items: center;
     }
@@ -1650,9 +1685,17 @@
         }
 
         .footer-section {
-            flex-direction: column; /* Column for items in mobile */
+            flex-direction: column;
+            /* Column for items in mobile */
             align-items: flex-start;
             gap: 5px;
+        }
+
+        /* Solo centrar el menu (segunda seccion) en mobile */
+        .footer-section:nth-child(2),
+        .footer-section:nth-child(2) .footer-nav {
+            align-items: center;
+            text-align: center;
         }
 
         .footer-nav {
@@ -1671,7 +1714,8 @@
             margin-bottom: 5px;
         }
 
-        .info-item, .social-info {
+        .info-item,
+        .social-info {
             font-size: 0.95rem;
         }
 
