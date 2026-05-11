@@ -168,25 +168,29 @@
     }
 
     .rayo-der {
-        top: 18%;
+        top: 8%;
         right: 2%;
         transform: rotate(-12deg) scaleX(-1);
     }
 
     @media (max-width: 768px) {
+        .decoracion-fondo {
+            z-index: 10;
+        }
+
         .rayo {
             width: clamp(100px, 35vw, 180px);
             opacity: 1;
         }
 
         .rayo-izq {
-            top: 2.5%;
+            top: 4.9%;
             left: 0;
             transform: rotate(10deg);
         }
 
         .rayo-der {
-            top: 12%;
+            top: 3%;
             right: -2%;
             transform: rotate(-10deg) scaleX(-1);
         }
