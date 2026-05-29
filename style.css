@@ -441,21 +441,35 @@
     }
 
     .badge-pogo {
-        background-color: var(--magenta-pogo);
-        padding: 10px 15px;
-        transform: rotate(-1deg);
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        margin-bottom: 15px;
+        background-image: url('pintura.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        color: white;
+        padding: clamp(26px, 5.5vw, 38px) clamp(80px, 16vw, 120px);
+        transform: rotate(-2.5deg);
+        font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+        margin-bottom: 25px;
         display: inline-block;
+        font-family: 'Anton', 'Arial Black', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
     }
 
     .badge-rock {
-        background-color: var(--magenta-pogo);
-        padding: 10px 30px;
-        transform: rotate(3deg);
-        font-size: clamp(1.1rem, 2.2vw, 1.6rem);
-        margin-bottom: 14px;
+        background-image: url('pintura.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        color: white;
+        padding: clamp(30px, 6vw, 42px) clamp(90px, 18vw, 140px);
+        transform: rotate(2.5deg);
+        font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+        margin-bottom: 20px;
         display: inline-block;
+        font-family: 'Anton', 'Arial Black', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
     }
 
     .cta-button {
