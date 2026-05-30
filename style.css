@@ -258,7 +258,8 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: clamp(-18px, -2.2vw, -8px); /* Even tighter, more pronounced overlapping look! */
+        gap: clamp(-18px, -2.2vw, -8px);
+        /* Even tighter, more pronounced overlapping look! */
         width: 100%;
     }
 
@@ -286,17 +287,49 @@
     }
 
     /* Individual Rotations and Hover angles for dynamic feel */
-    .letter-o  { --hover-rot: 6deg; }
-    .letter-l  { --hover-rot: -6deg; }
-    .letter-g  { --hover-rot: 5deg; }
-    .letter-a  { --hover-rot: -5deg; }
-    .letter-r  { --hover-rot: 8deg; }
-    .letter-o2 { --hover-rot: -7deg; }
-    .letter-c  { --hover-rot: 6deg; }
-    .letter-k  { --hover-rot: -8deg; }
-    .letter-d  { --hover-rot: 5deg; }
-    .letter-a2 { --hover-rot: -6deg; }
-    .letter-y  { --hover-rot: 7deg; }
+    .letter-o {
+        --hover-rot: 6deg;
+    }
+
+    .letter-l {
+        --hover-rot: -6deg;
+    }
+
+    .letter-g {
+        --hover-rot: 5deg;
+    }
+
+    .letter-a {
+        --hover-rot: -5deg;
+    }
+
+    .letter-r {
+        --hover-rot: 8deg;
+    }
+
+    .letter-o2 {
+        --hover-rot: -7deg;
+    }
+
+    .letter-c {
+        --hover-rot: 6deg;
+    }
+
+    .letter-k {
+        --hover-rot: -8deg;
+    }
+
+    .letter-d {
+        --hover-rot: 5deg;
+    }
+
+    .letter-a2 {
+        --hover-rot: -6deg;
+    }
+
+    .letter-y {
+        --hover-rot: 7deg;
+    }
 
     .collage-space {
         display: inline-block;
@@ -341,6 +374,7 @@
         clip-path: polygon(2% 3%, 97% 1%, 94% 98%, 3% 96%);
         padding-right: clamp(0.8rem, 2.5vw, 1.8rem) !important;
     }
+
     .letter-a::after {
         content: "";
         position: absolute;
@@ -348,21 +382,19 @@
         right: 0;
         width: clamp(0.4rem, 1.2vw, 0.8rem);
         height: 100%;
-        background: repeating-linear-gradient(
-            to bottom,
-            #ffffff,
-            #ffffff 6px,
-            #151515 6px,
-            #151515 12px
-        );
+        background: repeating-linear-gradient(to bottom,
+                #ffffff,
+                #ffffff 6px,
+                #151515 6px,
+                #151515 12px);
         border-left: 2px solid #151515;
     }
 
     /* R in ROCK */
     .letter-r {
         font-family: 'Road Rage', 'Permanent Marker', sans-serif;
-        background: 
-            repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0,0,0,0.06) 5px, rgba(0,0,0,0.06) 10px),
+        background:
+            repeating-linear-gradient(90deg, transparent, transparent 5px, rgba(0, 0, 0, 0.06) 5px, rgba(0, 0, 0, 0.06) 10px),
             var(--fucsia-borde);
         color: #0a0a0a;
         transform: rotate(-5deg) translateY(3px);
@@ -411,7 +443,7 @@
     /* A2 in DAY */
     .letter-a2 {
         font-family: 'Permanent Marker', 'Road Rage', sans-serif;
-        background-image: 
+        background-image:
             linear-gradient(to right, rgba(0, 0, 150, 0.08) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(0, 0, 150, 0.08) 1px, transparent 1px);
         background-size: 8px 8px;
@@ -449,14 +481,17 @@
         background-position: center;
         background-color: transparent;
         color: white;
-        width: clamp(300px, 92vw, 680px); /* Massive unified width! */
+        width: clamp(300px, 92vw, 680px);
+        /* Massive unified width! */
         text-align: center;
         display: inline-block;
         font-family: 'Anton', 'Arial Black', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         box-sizing: border-box;
-        font-size: clamp(1.2rem, 2.6vw, 1.85rem); /* Exactly the same massive font size for both! */
-        white-space: normal; /* Permits clean word wrapping on mobile */
+        font-size: clamp(1.2rem, 2.6vw, 1.85rem);
+        /* Exactly the same massive font size for both! */
+        white-space: normal;
+        /* Permits clean word wrapping on mobile */
         word-wrap: break-word;
     }
 
@@ -469,7 +504,8 @@
     .badge-rock {
         padding: clamp(16px, 3.2vw, 24px) 25px;
         transform: rotate(1.5deg);
-        margin-top: -12px; /* Pulls them even closer to overlap beautifully at this giant size */
+        margin-top: -12px;
+        /* Pulls them even closer to overlap beautifully at this giant size */
     }
 
     .cta-button {
@@ -606,10 +642,13 @@
 
     @media (min-width: 769px) {
         .grilla-wrapper {
-            max-width: 1400px; /* Full visual width utilization */
+            max-width: 1400px;
+            /* Full visual width utilization */
         }
+
         .grilla-wrapper::before {
-            display: none !important; /* Completely removes the middle vertical line */
+            display: none !important;
+            /* Completely removes the middle vertical line */
         }
     }
 
@@ -644,11 +683,13 @@
 
     .lista {
         display: flex;
-        flex-direction: row; /* Multi-column horizontal board layout! */
+        flex-direction: row;
+        /* Multi-column horizontal board layout! */
         flex-wrap: wrap;
         justify-content: center;
         align-items: stretch;
-        gap: clamp(20px, 3.5vw, 40px); /* Generous scattered spacing */
+        gap: clamp(20px, 3.5vw, 40px);
+        /* Generous scattered spacing */
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
@@ -665,7 +706,8 @@
         justify-content: center;
         text-align: center;
         gap: 6px;
-        width: clamp(240px, 28%, 320px); /* 3 to 4 column grid of stickers */
+        width: clamp(240px, 28%, 320px);
+        /* 3 to 4 column grid of stickers */
         background-color: var(--gris-etiquetas);
         color: black;
         border: 2px solid #0a0a0a;
@@ -676,7 +718,8 @@
     }
 
     .lista li::after {
-        display: none !important; /* Disables standard dots */
+        display: none !important;
+        /* Disables standard dots */
     }
 
     /* Scattered dynamically tilted board on Desktop */
@@ -685,18 +728,23 @@
             transform: rotate(-2deg) translateY(4px);
             box-shadow: 6px 6px 0px var(--magenta-pogo);
         }
+
         .lista li:nth-child(5n+2) {
             transform: rotate(2.5deg) translateY(-6px);
             box-shadow: 6px 6px 0px var(--amarillo-sumate);
         }
+
         .lista li:nth-child(5n+3) {
             transform: rotate(-1.5deg) translateY(8px);
             box-shadow: 6px 6px 0px var(--fucsia-borde);
         }
+
         .lista li:nth-child(5n+4) {
             transform: rotate(2deg) translateY(-3px);
-            box-shadow: 6px 6px 0px #00a8ff; /* Pop blue shadow color! */
+            box-shadow: 6px 6px 0px #00a8ff;
+            /* Pop blue shadow color! */
         }
+
         .lista li:nth-child(5n+5) {
             transform: rotate(-2.5deg) translateY(5px);
             box-shadow: 6px 6px 0px var(--magenta-pogo);
@@ -720,7 +768,8 @@
     .horario {
         font-family: 'Permanent Marker', cursive, sans-serif;
         font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-        color: var(--fucsia-borde); /* Hot pink hour color matching Olga theme */
+        color: var(--fucsia-borde);
+        /* Hot pink hour color matching Olga theme */
         letter-spacing: 0.5px;
         display: block;
     }
