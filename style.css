@@ -606,7 +606,10 @@
 
     @media (min-width: 769px) {
         .grilla-wrapper {
-            max-width: 1100px;
+            max-width: 1400px; /* Full visual width utilization */
+        }
+        .grilla-wrapper::before {
+            display: none !important; /* Completely removes the middle vertical line */
         }
     }
 
@@ -641,96 +644,95 @@
 
     .lista {
         display: flex;
-        flex-direction: column;
+        flex-direction: row; /* Multi-column horizontal board layout! */
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: stretch;
+        gap: clamp(20px, 3.5vw, 40px); /* Generous scattered spacing */
         width: 100%;
-        max-width: 800px;
+        max-width: 100%;
         margin: 0 auto;
-        color: black;
-        font-size: 1.5rem;
-        font-weight: bold;
-        box-shadow: 15px 15px 0px var(--dorado-olga);
-        transform: rotate(0deg);
-        padding: 60px 40px;
-        background-color: var(--gris-etiquetas);
+        padding: 60px 10px;
+        background-color: transparent !important;
+        box-shadow: none !important;
         list-style: none;
-    }
-
-    @media (min-width: 769px) {
-        .lista {
-            max-width: 1100px;
-            padding: 60px 80px;
-        }
     }
 
     .lista li {
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 10px;
-        width: 100%;
-        margin-bottom: 12px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 6px;
+        width: clamp(240px, 28%, 320px); /* 3 to 4 column grid of stickers */
+        background-color: var(--gris-etiquetas);
+        color: black;
+        border: 2px solid #0a0a0a;
+        padding: clamp(16px, 2.5vw, 22px) clamp(15px, 3vw, 25px);
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
     }
 
     .lista li::after {
-        content: "";
-        flex-grow: 1;
-        border-bottom: 3px dotted black;
-        order: 2;
-        margin: 0 10px;
-        position: relative;
-        top: -4px;
-        opacity: 0.5;
+        display: none !important; /* Disables standard dots */
     }
 
+    /* Scattered dynamically tilted board on Desktop */
     @media (min-width: 769px) {
-        .lista li::after {
-            border-bottom: 2px solid black;
-            margin: 0 20px;
-            opacity: 0.7;
+        .lista li:nth-child(5n+1) {
+            transform: rotate(-2deg) translateY(4px);
+            box-shadow: 6px 6px 0px var(--magenta-pogo);
+        }
+        .lista li:nth-child(5n+2) {
+            transform: rotate(2.5deg) translateY(-6px);
+            box-shadow: 6px 6px 0px var(--amarillo-sumate);
+        }
+        .lista li:nth-child(5n+3) {
+            transform: rotate(-1.5deg) translateY(8px);
+            box-shadow: 6px 6px 0px var(--fucsia-borde);
+        }
+        .lista li:nth-child(5n+4) {
+            transform: rotate(2deg) translateY(-3px);
+            box-shadow: 6px 6px 0px #00a8ff; /* Pop blue shadow color! */
+        }
+        .lista li:nth-child(5n+5) {
+            transform: rotate(-2.5deg) translateY(5px);
+            box-shadow: 6px 6px 0px var(--magenta-pogo);
         }
     }
 
     .banda {
-        order: 1;
-        text-align: left;
+        font-family: 'Anton', 'Arial Black', sans-serif;
+        font-size: clamp(1.15rem, 2.3vw, 1.55rem);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1.1;
+        color: #050505;
+        display: block;
     }
 
     .banda::before {
-        content: ".";
+        content: none !important;
     }
 
     .horario {
-        order: 3;
-        text-align: right;
-        white-space: nowrap;
+        font-family: 'Permanent Marker', cursive, sans-serif;
+        font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+        color: var(--fucsia-borde); /* Hot pink hour color matching Olga theme */
+        letter-spacing: 0.5px;
+        display: block;
     }
 
-    @media (min-width: 769px) {
-        .banda {
-            order: 3;
-            text-align: right;
-            text-transform: uppercase;
-        }
-
-        .banda::before {
-            content: none;
-        }
-
-        .horario {
-            order: 1;
-            text-align: left;
-        }
-
-        .horario::before {
-            content: ".";
-        }
+    .horario::before {
+        content: none !important;
     }
 
     /* Estilos responsivos para la lista */
     @media(max-width: 768px) {
         .lista-container {
-            padding: 25px 15px;
+            padding: 25px 10px;
         }
 
         .horario-badge {
@@ -748,16 +750,24 @@
         }
 
         .lista {
-            width: 95%;
-            font-size: 1rem;
-            transform: rotate(0deg);
-            padding: 40px 20px;
-            box-shadow: 8px 8px 0px var(--dorado-olga);
-            margin: 0 auto;
+            width: 100%;
+            padding: 30px 10px !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            gap: 15px;
         }
 
         .lista li {
-            margin-bottom: 15px;
+            width: 95% !important;
+            align-self: center !important;
+            margin-bottom: 0 !important;
+            transform: rotate(1.2deg) !important;
+            box-shadow: 5px 5px 0px var(--magenta-pogo) !important;
+        }
+
+        .lista li:nth-child(even) {
+            transform: rotate(-1.2deg) !important;
+            box-shadow: 5px 5px 0px var(--amarillo-sumate) !important;
         }
     }
 
