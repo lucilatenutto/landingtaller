@@ -15,6 +15,19 @@
         box-sizing: border-box;
     }
 
+    p,
+    label,
+    input,
+    select,
+    textarea,
+    .info-item,
+    .social-info,
+    .banda,
+    .horario {
+        font-family: 'Archivo', sans-serif !important;
+        text-transform: none !important;
+    }
+
     html {
         overflow-x: hidden;
         scroll-behavior: smooth;
@@ -658,7 +671,7 @@
         left: -3px;
         background-color: var(--fucsia-borde);
         color: white;
-        font-family: 'Stardos Stencil', cursive;
+        font-family: "Post No Bills Jaffna ExtraBold", cursive;
         font-size: 2.5rem;
         padding: 10px 30px;
         transform: rotate(-7deg);
@@ -669,16 +682,19 @@
 
     .no-llegues-tarde-badge {
         position: absolute;
-        top: -20px;
+        top: -25px;
         right: 10px;
-        background-color: var(--fucsia-borde);
+        background-image: url('pintura3.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
         color: white;
         font-family: 'Anton', sans-serif;
         font-size: 1.4rem;
-        padding: 8px 25px;
+        padding: 12px 30px;
         transform: rotate(7deg);
         z-index: 10;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     }
 
     .lista {
@@ -792,9 +808,9 @@
         }
 
         .no-llegues-tarde-badge {
-            top: -15px;
+            top: -20px;
             right: 5px;
-            padding: 6px 15px;
+            padding: 10px 22px;
             font-size: 1.1rem;
         }
 
@@ -873,7 +889,7 @@
         left: -50px;
         background-color: var(--fucsia-borde);
         color: white;
-        font-family: 'Stardos Stencil', cursive;
+        font-family: "Post No Bills Jaffna ExtraBold", cursive;
         font-size: 2.5rem;
         padding: 10px 30px;
         transform: rotate(-7deg);
@@ -884,16 +900,19 @@
 
     .no-te-pierdas-badge {
         position: absolute;
-        bottom: -20px;
+        bottom: -25px;
         right: -20px;
-        background-color: var(--fucsia-borde);
+        background-image: url('pintura3.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
         color: white;
         font-family: 'Anton', sans-serif;
         font-size: 1.4rem;
-        padding: 8px 25px;
+        padding: 12px 30px;
         transform: rotate(-7deg);
         z-index: 2;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     }
 
     .estadio-img {
@@ -922,8 +941,8 @@
 
         .no-te-pierdas-badge {
             right: 5px;
-            bottom: -10px;
-            padding: 6px 15px;
+            bottom: -15px;
+            padding: 10px 22px;
             font-size: 1.1rem;
         }
 
@@ -1132,7 +1151,7 @@
         left: -15px;
         background-color: var(--fucsia-borde);
         color: white;
-        font-family: 'Stardos Stencil', cursive;
+        font-family: "Post No Bills Jaffna ExtraBold", cursive;
         font-size: 2.5rem;
         padding: 10px 30px;
         transform: rotate(-10deg);
@@ -1478,15 +1497,90 @@
         text-transform: none;
     }
 
-    .badge-pogo,
-    .badge-rock,
     .sticker,
     .cta-button {
         font-family: 'Anton', sans-serif;
         text-transform: uppercase;
     }
 
+    .badge-rock,
+    .badge-pogo {
+        font-family: 'Post No Bills Jaffna ExtraBold', sans-serif;
+        text-transform: uppercase;
+    }
+
     @media (max-width: 768px) {
+        .hero::before {
+            height: 70vw;
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .hero {
+            padding-top: 40px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-content {
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .collage-title {
+            gap: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .collage-row {
+            gap: -4px;
+            justify-content: center;
+        }
+
+        .collage-letter {
+            font-size: 2.2rem;
+            width: 2.6rem;
+            height: 3.4rem;
+            box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .letter-a {
+            padding-right: 0.4rem !important;
+        }
+
+        .letter-a::after {
+            width: 0.2rem;
+        }
+
+        .badges-container {
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            gap: 5px;
+            width: 100%;
+        }
+
+        .badge-pogo,
+        .badge-rock {
+            width: 95%;
+            max-width: 400px;
+            font-size: 1.15rem;
+            padding: 18px 24px;
+            margin-top: 0;
+            margin-bottom: 0;
+            transform: rotate(-1.2deg);
+        }
+
+        .badge-rock {
+            transform: rotate(1.2deg);
+            margin-top: -6px;
+        }
+
         h1 {
             padding: 25px 35px;
             transform: rotate(-2deg);
@@ -1502,11 +1596,6 @@
             padding: 15px 40px;
             width: fit-content;
             min-width: 200px;
-        }
-
-        .hero {
-            padding-top: 60px;
-            padding-bottom: 50px;
         }
 
         .section-separator {
@@ -1621,7 +1710,7 @@
         left: -30px;
         background-color: var(--fucsia-borde);
         color: white;
-        font-family: 'Road Rage', cursive;
+        font-family: "Post No Bills Jaffna ExtraBold", cursive;
         font-size: 2.5rem;
         padding: 10px 35px;
         transform: rotate(-5deg);
@@ -1633,16 +1722,19 @@
 
     .badge-youtube {
         position: absolute;
-        top: -40px;
+        top: -45px;
         right: -50px;
-        background-color: var(--fucsia-borde);
+        background-image: url('pintura3.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
         color: white;
         font-family: 'Anton', sans-serif;
         font-size: 1.4rem;
-        padding: 12px 40px;
+        padding: 16px 45px;
         transform: rotate(12deg);
         z-index: 10;
-        box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
     }
 
     .box-socials {
@@ -1722,10 +1814,10 @@
         }
 
         .badge-youtube {
-            top: -25px;
+            top: -30px;
             right: 5px;
             font-size: 1.1rem;
-            padding: 6px 15px;
+            padding: 10px 22px;
         }
 
         .badge-olga-logo {
