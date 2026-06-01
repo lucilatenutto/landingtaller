@@ -7,6 +7,7 @@
         --gris-fondo-fin: #1E2122;
         --gris-etiquetas: #EAEAEA;
         --section-spacing: 50px;
+        --rojo-olga: #ED1C24;
     }
 
     * {
@@ -57,7 +58,7 @@
     .barra-superior {
         width: 100%;
         height: 70px;
-        background-color: var(--fucsia-borde);
+        background-color: var(--rojo-olga);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -128,7 +129,7 @@
         position: absolute;
         top: 70px;
         right: 0;
-        background-color: var(--fucsia-borde);
+        background-color: var(--rojo-olga);
         flex-direction: column;
         padding: 10px 0;
         border-bottom: 5px solid var(--dorado-olga);
@@ -525,10 +526,10 @@
         background-color: var(--amarillo-sumate);
         color: black;
         text-decoration: none;
-        padding: 30px 80px;
-        font-size: 3rem;
+        padding: 20px 50px;
+        font-size: 2.2rem;
         font-weight: bold;
-        box-shadow: 10px 10px 0px var(--magenta-pogo);
+        box-shadow: 8px 8px 0px var(--magenta-pogo);
         border: none;
         margin-bottom: 0;
         transition: 0.2s;
@@ -665,6 +666,33 @@
         }
     }
 
+    .grilla-header {
+        position: relative;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto 30px auto;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    .horario-info-banner {
+        background-color: var(--gris-etiquetas);
+        color: black;
+        font-family: 'Archivo', sans-serif;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 700;
+        text-align: center;
+        padding: 30px 40px 15px; /* bottom padding is smaller to balance text */
+        border: 2px solid #0a0a0a;
+        box-shadow: 6px 6px 0px var(--fucsia-borde);
+        width: 95%;
+        margin-top: 15px; /* gives space for badges at top */
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
     .horario-badge {
         position: absolute;
         top: -25px;
@@ -699,99 +727,126 @@
 
     .lista {
         display: flex;
-        flex-direction: row;
-        /* Multi-column horizontal board layout! */
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch;
-        gap: clamp(20px, 3.5vw, 40px);
-        /* Generous scattered spacing */
+        flex-direction: column;
+        gap: 30px;
         width: 100%;
-        max-width: 100%;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 60px 10px;
+        padding: 80px 10px 40px;
         background-color: transparent !important;
         box-shadow: none !important;
         list-style: none;
+        position: relative;
+    }
+
+    /* Vertical Line representing the timeline axis */
+    .lista::before {
+        content: "";
+        position: absolute;
+        top: 80px;
+        bottom: 80px;
+        left: 200px; /* Space between time labels and card details */
+        width: 4px;
+        background-color: var(--fucsia-borde);
+        opacity: 0.6;
+        z-index: 1;
     }
 
     .lista li {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 6px;
-        width: clamp(240px, 28%, 320px);
-        /* 3 to 4 column grid of stickers */
-        background-color: var(--gris-etiquetas);
-        color: black;
-        border: 2px solid #0a0a0a;
-        padding: clamp(16px, 2.5vw, 22px) clamp(15px, 3vw, 25px);
-        box-sizing: border-box;
+        width: 100%;
+        gap: 40px;
         position: relative;
         z-index: 2;
     }
 
-    .lista li::after {
-        display: none !important;
-        /* Disables standard dots */
+    .time-block {
+        width: 160px;
+        font-family: 'Archivo', sans-serif;
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: var(--dorado-olga);
+        text-align: right;
+        flex-shrink: 0;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.5px;
     }
 
-    /* Scattered dynamically tilted board on Desktop */
-    @media (min-width: 769px) {
-        .lista li:nth-child(5n+1) {
-            transform: rotate(-2deg) translateY(4px);
-            box-shadow: 6px 6px 0px var(--magenta-pogo);
-        }
+    .bullet-point {
+        width: 16px;
+        height: 16px;
+        background-color: #00a8ff;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: absolute;
+        left: 194px; /* Center-aligned on the vertical line */
+        z-index: 3;
+        box-shadow: 0 0 10px #00a8ff;
+        transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        .lista li:nth-child(5n+2) {
-            transform: rotate(2.5deg) translateY(-6px);
-            box-shadow: 6px 6px 0px var(--amarillo-sumate);
-        }
+    .card-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        flex-grow: 1;
+        background-color: var(--gris-etiquetas);
+        color: black;
+        border: 2px solid #0a0a0a;
+        padding: 16px 25px;
+        position: relative;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-        .lista li:nth-child(5n+3) {
-            transform: rotate(-1.5deg) translateY(8px);
-            box-shadow: 6px 6px 0px var(--fucsia-borde);
-        }
-
-        .lista li:nth-child(5n+4) {
-            transform: rotate(2deg) translateY(-3px);
-            box-shadow: 6px 6px 0px #00a8ff;
-            /* Pop blue shadow color! */
-        }
-
-        .lista li:nth-child(5n+5) {
-            transform: rotate(-2.5deg) translateY(5px);
-            box-shadow: 6px 6px 0px var(--magenta-pogo);
-        }
+    .tag-stage {
+        font-family: 'Archivo', sans-serif !important;
+        font-size: 0.75rem;
+        font-weight: 900;
+        color: #666;
+        letter-spacing: 1px;
+        text-transform: uppercase !important;
     }
 
     .banda {
         font-family: 'Anton', 'Arial Black', sans-serif;
-        font-size: clamp(1.15rem, 2.3vw, 1.55rem);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height: 1.1;
+        font-size: 1.6rem;
+        text-transform: uppercase !important;
         color: #050505;
-        display: block;
+        line-height: 1.2;
     }
 
-    .banda::before {
-        content: none !important;
-    }
+    /* Alternating drop shadows and bullet colors on Desktop */
+    @media (min-width: 769px) {
+        .lista li:hover .card-details {
+            transform: translateX(8px);
+        }
 
-    .horario {
-        font-family: 'Permanent Marker', cursive, sans-serif;
-        font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-        color: var(--fucsia-borde);
-        /* Hot pink hour color matching Olga theme */
-        letter-spacing: 0.5px;
-        display: block;
-    }
+        .lista li:hover .bullet-point {
+            transform: scale(1.3);
+            background-color: var(--magenta-pogo);
+            box-shadow: 0 0 15px var(--magenta-pogo);
+        }
 
-    .horario::before {
-        content: none !important;
+        /* Shadow patterns for cards */
+        .lista li:nth-child(4n+1) .card-details { box-shadow: 6px 6px 0px #00a8ff; }
+        .lista li:nth-child(4n+2) .card-details { box-shadow: 6px 6px 0px var(--magenta-pogo); }
+        .lista li:nth-child(4n+3) .card-details { box-shadow: 6px 6px 0px var(--amarillo-sumate); }
+        .lista li:nth-child(4n+4) .card-details { box-shadow: 6px 6px 0px var(--fucsia-borde); }
+
+        .lista li:hover:nth-child(4n+1) .card-details { box-shadow: 10px 10px 0px #00a8ff; }
+        .lista li:hover:nth-child(4n+2) .card-details { box-shadow: 10px 10px 0px var(--magenta-pogo); }
+        .lista li:hover:nth-child(4n+3) .card-details { box-shadow: 10px 10px 0px var(--amarillo-sumate); }
+        .lista li:hover:nth-child(4n+4) .card-details { box-shadow: 10px 10px 0px var(--fucsia-borde); }
+
+        /* Bullet color patterns */
+        .lista li:nth-child(4n+1) .bullet-point { background-color: #00a8ff; box-shadow: 0 0 8px #00a8ff; }
+        .lista li:nth-child(4n+2) .bullet-point { background-color: var(--magenta-pogo); box-shadow: 0 0 8px var(--magenta-pogo); }
+        .lista li:nth-child(4n+3) .bullet-point { background-color: var(--amarillo-sumate); box-shadow: 0 0 8px var(--amarillo-sumate); }
+        .lista li:nth-child(4n+4) .bullet-point { background-color: var(--fucsia-borde); box-shadow: 0 0 8px var(--fucsia-borde); }
     }
 
     /* Estilos responsivos para la lista */
@@ -801,39 +856,93 @@
         }
 
         .horario-badge {
-            top: -30px;
+            top: -20px;
             left: 10px;
-            padding: 8px 20px;
-            font-size: 1.8rem;
+            padding: 5px 12px;
+            font-size: 1.3rem;
+            box-shadow: 4px 4px 0px var(--dorado-olga);
         }
 
         .no-llegues-tarde-badge {
-            top: -20px;
+            top: -15px;
             right: 5px;
-            padding: 10px 22px;
-            font-size: 1.1rem;
+            padding: 6px 15px;
+            font-size: 0.85rem;
+        }
+
+        .grilla-header {
+            margin-bottom: 20px !important;
+            padding: 0 10px !important;
+        }
+
+        .horario-info-banner {
+            padding: 32px 12px 10px !important; /* tighter top padding to accommodate smaller badges */
+            font-size: 0.72rem !important; /* beautifully smaller for titles */
+            width: 100% !important;
+            box-shadow: 4px 4px 0px var(--fucsia-borde) !important;
         }
 
         .lista {
-            width: 100%;
-            padding: 30px 10px !important;
-            background-color: transparent !important;
-            box-shadow: none !important;
-            gap: 15px;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 14px !important; /* even more compact gap */
+            padding: 40px 10px 10px !important;
+        }
+
+        .lista::before {
+            left: 20px !important;
+            top: 40px !important;
+            bottom: 40px !important;
         }
 
         .lista li {
-            width: 95% !important;
-            align-self: center !important;
-            margin-bottom: 0 !important;
-            transform: rotate(1.2deg) !important;
-            box-shadow: 5px 5px 0px var(--magenta-pogo) !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 5px !important;
+            padding-left: 45px !important;
         }
 
-        .lista li:nth-child(even) {
-            transform: rotate(-1.2deg) !important;
-            box-shadow: 5px 5px 0px var(--amarillo-sumate) !important;
+        .time-block {
+            width: auto !important;
+            text-align: left !important;
+            font-size: 0.8rem !important; /* extremely legible and compact */
+            margin-bottom: 0 !important;
+            font-weight: 800 !important;
         }
+
+        .bullet-point {
+            width: 12px !important;
+            height: 12px !important;
+            border-width: 2px !important;
+            left: 16px !important;
+            top: 2px !important; /* perfectly aligned with smaller time-block */
+        }
+
+        .card-details {
+            width: 100% !important;
+            padding: 6px 12px !important; /* extremely compact */
+            gap: 2px !important;
+        }
+
+        .tag-stage {
+            font-size: 0.58rem !important;
+        }
+
+        .banda {
+            font-size: 1.0rem !important;
+        }
+
+        /* Mobile shadow colors */
+        .lista li:nth-child(4n+1) .card-details { box-shadow: 5px 5px 0px #00a8ff !important; }
+        .lista li:nth-child(4n+2) .card-details { box-shadow: 5px 5px 0px var(--magenta-pogo) !important; }
+        .lista li:nth-child(4n+3) .card-details { box-shadow: 5px 5px 0px var(--amarillo-sumate) !important; }
+        .lista li:nth-child(4n+4) .card-details { box-shadow: 5px 5px 0px var(--fucsia-borde) !important; }
+
+        /* Mobile bullet color patterns */
+        .lista li:nth-child(4n+1) .bullet-point { background-color: #00a8ff !important; box-shadow: 0 0 6px #00a8ff !important; }
+        .lista li:nth-child(4n+2) .bullet-point { background-color: var(--magenta-pogo) !important; box-shadow: 0 0 6px var(--magenta-pogo) !important; }
+        .lista li:nth-child(4n+3) .bullet-point { background-color: var(--amarillo-sumate) !important; box-shadow: 0 0 6px var(--amarillo-sumate) !important; }
+        .lista li:nth-child(4n+4) .bullet-point { background-color: var(--fucsia-borde) !important; box-shadow: 0 0 6px var(--fucsia-borde) !important; }
     }
 
     .ubicacion-container {
@@ -1592,10 +1701,10 @@
         }
 
         .cta-button {
-            font-size: 1.8rem;
-            padding: 15px 40px;
+            font-size: 1.4rem;
+            padding: 12px 30px;
             width: fit-content;
-            min-width: 200px;
+            min-width: 180px;
         }
 
         .section-separator {
@@ -1962,7 +2071,7 @@
         padding: 30px 0;
         width: 100%;
         margin-top: 50px;
-        border-top: 5px solid var(--fucsia-borde);
+        border-top: 5px solid var(--rojo-olga);
     }
 
     .footer-container {
@@ -2020,7 +2129,7 @@
     }
 
     .info-item:hover {
-        color: var(--fucsia-borde);
+        color: var(--rojo-olga);
         opacity: 0.8;
     }
 
