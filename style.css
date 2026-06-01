@@ -583,7 +583,6 @@
     .sticker1,
     .sticker2,
     .sticker3,
-    .sticker4,
     .sticker5 {
         background-color: var(--gris-etiquetas);
         color: black;
@@ -592,6 +591,7 @@
         font-size: 1.4rem;
         width: fit-content;
         text-align: center;
+        text-transform: uppercase;
     }
 
     .sticker1 {
@@ -609,11 +609,6 @@
         transform: rotate(-1deg);
     }
 
-    .sticker4 {
-        box-shadow: 6px 6px 0px var(--magenta-pogo);
-        transform: rotate(-1deg);
-    }
-
     .sticker5 {
         box-shadow: 6px 6px 0px var(--magenta-pogo);
         transform: rotate(-1deg);
@@ -622,21 +617,26 @@
     @media (max-width: 768px) {
         .info-section {
             flex-direction: column;
-            padding: 25px 5%;
+            padding: 25px 35px !important;
             gap: 15px;
         }
 
         .sticker1,
         .sticker2,
         .sticker3,
-        .sticker4,
         .sticker5 {
             align-self: center;
             transform: rotate(0.5deg);
             width: 90%;
-            font-size: 1rem;
-            padding: 10px 20px;
+            font-size: 0.85rem !important; /* unified compact size */
+            padding: 12px 20px !important;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); /* elegant dynamic pop shadows */
         }
+
+        .sticker1 { box-shadow: 4px 4px 0px var(--magenta-pogo) !important; }
+        .sticker2 { box-shadow: 4px 4px 0px var(--amarillo-sumate) !important; }
+        .sticker3 { box-shadow: 4px 4px 0px var(--amarillo-sumate) !important; }
+        .sticker5 { box-shadow: 4px 4px 0px var(--magenta-pogo) !important; }
     }
 
     .lista-container {
@@ -852,7 +852,7 @@
     /* Estilos responsivos para la lista */
     @media(max-width: 768px) {
         .lista-container {
-            padding: 25px 10px;
+            padding: 25px 35px !important;
         }
 
         .horario-badge {
@@ -1033,7 +1033,7 @@
 
     @media (max-width: 768px) {
         .ubicacion-container {
-            padding: 25px 15px;
+            padding: 25px 35px !important;
         }
 
         .lugar-box {
@@ -1041,18 +1041,25 @@
             box-shadow: 8px 8px 0px var(--dorado-olga);
         }
 
+        .lugar-box {
+            padding: 30px 15px !important;
+            font-size: 0.95rem !important;
+            line-height: 1.4 !important;
+        }
+
         .lugar-badge {
             top: -15px;
             left: 5px;
-            padding: 8px 20px;
-            font-size: 1.8rem;
+            padding: 5px 12px;
+            font-size: 1.4rem;
+            box-shadow: 4px 4px 0px var(--dorado-olga);
         }
 
         .no-te-pierdas-badge {
             right: 5px;
             bottom: -15px;
-            padding: 10px 22px;
-            font-size: 1.1rem;
+            padding: 6px 15px;
+            font-size: 0.85rem;
         }
 
         .estadio-img {
@@ -1185,6 +1192,9 @@
     }
 
     @media (max-width: 768px) {
+        .entradas-container {
+            padding: 25px 35px !important;
+        }
         .entradas-wrapper {
             flex-direction: column;
             align-items: center;
@@ -1203,32 +1213,33 @@
         }
 
         .entradas-badge {
-            font-size: 1.8rem;
-            top: -20px;
+            font-size: 1.4rem;
+            top: -18px;
             left: 5px;
-            padding: 8px 20px;
+            padding: 5px 12px;
+            box-shadow: 4px 4px 0px var(--dorado-olga);
         }
 
         .fecha-badge {
-            font-size: 1.1rem;
-            top: -15px;
+            font-size: 0.85rem;
+            top: -12px;
             right: 5px;
             padding: 6px 15px;
         }
 
         .entradas-box {
-            padding: 40px 20px 20px;
-            font-size: 1rem;
+            padding: 40px 15px 15px !important;
+            font-size: 0.95rem !important;
         }
 
         .btn-compra {
-            font-size: 1.5rem;
-            padding: 15px;
+            font-size: 1.3rem !important;
+            padding: 12px 20px !important;
         }
 
         .venta-box {
-            font-size: 1rem;
-            padding: 15px;
+            font-size: 0.95rem !important;
+            padding: 15px !important;
         }
     }
 
@@ -1731,11 +1742,11 @@
         }
 
         .pogo-section {
-            padding: 25px 10px;
+            padding: 25px 35px !important;
         }
 
         .pogo-container {
-            width: 85%;
+            width: 100% !important;
             padding: 40px 20px 70px;
         }
 
@@ -1902,7 +1913,7 @@
 
     @media (max-width: 768px) {
         .olga-equipo-section {
-            padding: 25px 15px;
+            padding: 25px 35px !important;
             gap: 30px;
         }
 
@@ -1923,47 +1934,82 @@
         }
 
         .badge-youtube {
-            top: -30px;
+            top: -15px;
             right: 5px;
-            font-size: 1.1rem;
-            padding: 10px 22px;
+            font-size: 0.85rem;
+            padding: 6px 15px;
         }
 
         .badge-olga-logo {
-            top: -20px;
+            top: -18px;
             left: 5px;
-            font-size: 1.8rem;
-            padding: 8px 20px;
+            font-size: 1.4rem;
+            padding: 5px 12px;
+            box-shadow: 4px 4px 0px var(--dorado-olga);
         }
 
         .info-content-box {
-            font-size: 1.1rem;
-            padding: 50px 20px 20px;
+            font-size: 0.95rem !important;
+            padding: 40px 15px 15px !important;
         }
 
         .box-socials {
             min-width: 100%;
-            font-size: 1.1rem;
-            padding: 25px;
+            font-size: 0.95rem !important;
+            padding: 20px !important;
         }
 
         .box-equipo-desc {
-            font-size: 1.1rem;
-            padding: 40px 20px;
+            font-size: 0.95rem !important;
+            padding: 30px 15px !important;
             align-self: center;
         }
 
         .badge-olga-mini {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             bottom: -15px;
             right: 5px;
-            padding: 5px 15px;
+            padding: 5px 12px;
+            box-shadow: 4px 4px 0px #00a8ff;
         }
 
         .pogo-badge {
-            font-size: 1.8rem;
-            left: -10px;
+            font-size: 1.4rem;
+            left: 5px;
             top: -15px;
+            padding: 5px 12px;
+            box-shadow: 4px 4px 0px var(--amarillo-sumate);
+        }
+
+        .btn-de-nada {
+            font-size: 1.3rem !important;
+            padding: 10px 25px !important;
+        }
+
+        .btn-registrarse {
+            font-size: 1.3rem !important;
+            padding: 8px 25px !important;
+        }
+
+        .form-registro {
+            font-size: 0.95rem !important;
+            gap: 10px !important;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            font-size: 0.95rem !important;
+            padding: 8px !important;
+        }
+
+        .comentario-header {
+            font-size: 1.05rem !important;
+        }
+
+        .comentario-texto {
+            font-size: 0.95rem !important;
         }
     }
 
