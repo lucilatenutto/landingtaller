@@ -2064,17 +2064,14 @@
         }
     }
 
-    /* Pogo Success Message */
     .pogo-success-view {
         background-color: #B2A22C;
-        /* Ochre yellow as in image */
         color: black;
         padding: 60px 40px;
         text-align: center;
         border-radius: 20px;
         position: relative;
         overflow: visible;
-        /* Changed from hidden to show rays */
         border: 4px solid black;
         box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.5);
         display: flex;
@@ -2083,7 +2080,6 @@
         justify-content: center;
         min-height: 300px;
         z-index: 20;
-        /* Above form */
     }
 
     .success-title {
@@ -2160,10 +2156,8 @@
         }
     }
 
-    /* Main Footer Styling */
     .main-footer {
         background-color: #3d001a;
-        /* Dark wine color from image */
         color: white;
         padding: 30px 0;
         width: 100%;
@@ -2177,7 +2171,6 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        /* Better spacing for desktop */
         gap: 20px;
         padding: 0 20px;
         flex-wrap: nowrap;
@@ -2210,7 +2203,6 @@
     .footer-nav {
         display: flex;
         flex-direction: row;
-        /* Back to row for desktop */
         gap: 15px;
         align-items: center;
     }
@@ -2233,7 +2225,6 @@
     .footer-socials {
         display: flex;
         flex-direction: row;
-        /* Back to row for desktop */
         gap: 20px;
         align-items: center;
     }
@@ -2255,7 +2246,6 @@
         stroke-width: 2;
     }
 
-    /* Mobile Responsive Footer */
     @media (max-width: 768px) {
         .footer-container {
             justify-content: space-around;
@@ -2266,12 +2256,10 @@
 
         .footer-section {
             flex-direction: column;
-            /* Column for items in mobile */
             align-items: flex-start;
             gap: 5px;
         }
 
-        /* Solo centrar el menu (segunda seccion) en mobile */
         .footer-section:nth-child(2),
         .footer-section:nth-child(2) .footer-nav {
             align-items: center;
