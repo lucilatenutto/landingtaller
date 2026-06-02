@@ -274,7 +274,6 @@
         justify-content: center;
         align-items: center;
         gap: clamp(-18px, -2.2vw, -8px);
-        /* Even tighter, more pronounced overlapping look! */
         width: 100%;
     }
 
@@ -301,7 +300,6 @@
         cursor: pointer;
     }
 
-    /* Individual Rotations and Hover angles for dynamic feel */
     .letter-o {
         --hover-rot: 6deg;
     }
@@ -351,7 +349,6 @@
         width: clamp(0.7rem, 2vw, 1.8rem);
     }
 
-    /* O in OLGA */
     .letter-o {
         font-family: 'Stardos Stencil', 'Impact', sans-serif;
         font-weight: 700;
@@ -361,7 +358,6 @@
         clip-path: polygon(3% 2%, 96% 4%, 93% 97%, 1% 93%);
     }
 
-    /* L in OLGA */
     .letter-l {
         font-family: 'Anton', 'Arial Black', sans-serif;
         background-color: #151515;
@@ -370,7 +366,6 @@
         clip-path: polygon(1% 4%, 98% 1%, 95% 98%, 4% 95%);
     }
 
-    /* G in OLGA */
     .letter-g {
         font-family: 'Anton', 'Arial Black', sans-serif;
         background-color: var(--fucsia-titulo);
@@ -379,7 +374,6 @@
         clip-path: polygon(4% 1%, 95% 4%, 98% 94%, 2% 97%);
     }
 
-    /* A in OLGA */
     .letter-a {
         font-family: 'Stardos Stencil', 'Impact', sans-serif;
         font-weight: 700;
@@ -405,7 +399,6 @@
         border-left: 2px solid #151515;
     }
 
-    /* R in ROCK */
     .letter-r {
         font-family: 'Road Rage', 'Permanent Marker', sans-serif;
         background:
@@ -416,7 +409,6 @@
         clip-path: polygon(5% 2%, 97% 4%, 93% 96%, 2% 98%);
     }
 
-    /* O2 in ROCK */
     .letter-o2 {
         font-family: 'Permanent Marker', 'Stardos Stencil', sans-serif;
         background-color: #151515;
@@ -425,7 +417,6 @@
         clip-path: polygon(2% 5%, 96% 2%, 98% 94%, 4% 97%);
     }
 
-    /* C in ROCK */
     .letter-c {
         font-family: 'Anton', 'Arial Black', sans-serif;
         background-color: var(--fucsia-titulo);
@@ -434,7 +425,6 @@
         clip-path: polygon(3% 1%, 98% 4%, 95% 97%, 2% 93%);
     }
 
-    /* K in ROCK */
     .letter-k {
         font-family: 'Road Rage', 'Permanent Marker', sans-serif;
         background-color: #ffffff;
@@ -444,7 +434,6 @@
         border: 1px solid rgba(0, 0, 0, 0.15);
     }
 
-    /* D in DAY */
     .letter-d {
         font-family: 'Stardos Stencil', 'Impact', sans-serif;
         font-weight: 700;
@@ -455,7 +444,6 @@
         border: 1px solid rgba(0, 0, 0, 0.15);
     }
 
-    /* A2 in DAY */
     .letter-a2 {
         font-family: 'Permanent Marker', 'Road Rage', sans-serif;
         background-image:
@@ -469,7 +457,6 @@
         border: 1px solid rgba(0, 0, 0, 0.15);
     }
 
-    /* Y in DAY */
     .letter-y {
         font-family: 'Road Rage', 'Anton', sans-serif;
         background-color: var(--fucsia-titulo);
@@ -497,16 +484,13 @@
         background-color: transparent;
         color: white;
         width: clamp(300px, 92vw, 680px);
-        /* Massive unified width! */
         text-align: center;
         display: inline-block;
         font-family: 'Anton', 'Arial Black', sans-serif;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         box-sizing: border-box;
         font-size: clamp(1.2rem, 2.6vw, 1.85rem);
-        /* Exactly the same massive font size for both! */
         white-space: normal;
-        /* Permits clean word wrapping on mobile */
         word-wrap: break-word;
     }
 
@@ -520,7 +504,6 @@
         padding: clamp(16px, 3.2vw, 24px) 25px;
         transform: rotate(1.5deg);
         margin-top: -12px;
-        /* Pulls them even closer to overlap beautifully at this giant size */
     }
 
     .cta-button {
@@ -632,10 +615,8 @@
             transform: rotate(0.5deg);
             width: 90%;
             font-size: 0.85rem !important;
-            /* unified compact size */
             padding: 12px 20px !important;
             box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-            /* elegant dynamic pop shadows */
             white-space: normal !important;
         }
 
@@ -674,12 +655,10 @@
     @media (min-width: 769px) {
         .grilla-wrapper {
             max-width: 1400px;
-            /* Full visual width utilization */
         }
 
         .grilla-wrapper::before {
             display: none !important;
-            /* Completely removes the middle vertical line */
         }
     }
 
@@ -701,12 +680,10 @@
         font-weight: 700;
         text-align: center;
         padding: 30px 40px 15px;
-        /* bottom padding is smaller to balance text */
         border: 2px solid #0a0a0a;
         box-shadow: 6px 6px 0px var(--fucsia-borde);
         width: 95%;
         margin-top: 15px;
-        /* gives space for badges at top */
         position: relative;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -758,14 +735,12 @@
         position: relative;
     }
 
-    /* Vertical Line representing the timeline axis */
     .lista::before {
         content: "";
         position: absolute;
         top: 80px;
         bottom: 80px;
         left: 200px;
-        /* Space between time labels and card details */
         width: 4px;
         background-color: var(--fucsia-borde);
         opacity: 0.6;
@@ -802,7 +777,6 @@
         border-radius: 50%;
         position: absolute;
         left: 194px;
-        /* Center-aligned on the vertical line */
         z-index: 3;
         box-shadow: 0 0 10px #00a8ff;
         transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -840,7 +814,6 @@
         line-height: 1.2;
     }
 
-    /* Alternating drop shadows and bullet colors on Desktop */
     @media (min-width: 769px) {
         .lista li:hover .card-details {
             transform: translateX(8px);
@@ -852,7 +825,6 @@
             box-shadow: 0 0 15px var(--magenta-pogo);
         }
 
-        /* Shadow patterns for cards */
         .lista li:nth-child(4n+1) .card-details {
             box-shadow: 6px 6px 0px #00a8ff;
         }
@@ -885,7 +857,6 @@
             box-shadow: 10px 10px 0px var(--fucsia-borde);
         }
 
-        /* Bullet color patterns */
         .lista li:nth-child(4n+1) .bullet-point {
             background-color: #00a8ff;
             box-shadow: 0 0 8px #00a8ff;
@@ -907,7 +878,6 @@
         }
     }
 
-    /* Estilos responsivos para la lista */
     @media(max-width: 768px) {
         .lista-container {
             padding: 25px 35px !important;
@@ -935,9 +905,7 @@
 
         .horario-info-banner {
             padding: 32px 12px 10px !important;
-            /* tighter top padding to accommodate smaller badges */
             font-size: 0.72rem !important;
-            /* beautifully smaller for titles */
             width: 100% !important;
             box-shadow: 4px 4px 0px var(--fucsia-borde) !important;
         }
@@ -946,7 +914,6 @@
             display: flex !important;
             flex-direction: column !important;
             gap: 14px !important;
-            /* even more compact gap */
             padding: 40px 10px 10px !important;
         }
 
@@ -967,7 +934,6 @@
             width: auto !important;
             text-align: left !important;
             font-size: 0.8rem !important;
-            /* extremely legible and compact */
             margin-bottom: 0 !important;
             font-weight: 800 !important;
         }
@@ -978,13 +944,11 @@
             border-width: 2px !important;
             left: 16px !important;
             top: 2px !important;
-            /* perfectly aligned with smaller time-block */
         }
 
         .card-details {
             width: 100% !important;
             padding: 6px 12px !important;
-            /* extremely compact */
             gap: 2px !important;
         }
 
@@ -996,7 +960,6 @@
             font-size: 1.0rem !important;
         }
 
-        /* Mobile shadow colors */
         .lista li:nth-child(4n+1) .card-details {
             box-shadow: 5px 5px 0px #00a8ff !important;
         }
@@ -1013,7 +976,6 @@
             box-shadow: 5px 5px 0px var(--fucsia-borde) !important;
         }
 
-        /* Mobile bullet color patterns */
         .lista li:nth-child(4n+1) .bullet-point {
             background-color: #00a8ff !important;
             box-shadow: 0 0 6px #00a8ff !important;
@@ -1675,7 +1637,6 @@
         border-bottom: 2px dashed white;
     }
 
-    /* Separadores de SecciÃ³n */
     .section-separator {
         display: flex;
         justify-content: center;
@@ -1873,7 +1834,6 @@
         }
     }
 
-    /* SecciÃ³n Olga Equipo */
     .olga-equipo-section {
         display: flex;
         flex-direction: column;
